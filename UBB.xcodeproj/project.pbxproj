@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D04C2B811FB34E38000C8813 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04C2B801FB34E38000C8813 /* NewsTableViewController.swift */; };
+		D04C2B861FB35580000C8813 /* Gesta Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C2B821FB35580000C8813 /* Gesta Italic.ttf */; };
+		D04C2B871FB35580000C8813 /* Gesta Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C2B831FB35580000C8813 /* Gesta Light.ttf */; };
+		D04C2B881FB35580000C8813 /* Gesta Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C2B841FB35580000C8813 /* Gesta Bold.ttf */; };
+		D04C2B891FB35580000C8813 /* Gesta Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C2B851FB35580000C8813 /* Gesta Regular.ttf */; };
+		D04C2B8B1FB35828000C8813 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04C2B8A1FB35828000C8813 /* NewsTableViewCell.swift */; };
+		D04C2B8D1FB364BC000C8813 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04C2B8C1FB364BC000C8813 /* News.swift */; };
 		D0C6AE831FB33E7C0010C882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE821FB33E7C0010C882 /* AppDelegate.swift */; };
 		D0C6AE851FB33E7C0010C882 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE841FB33E7C0010C882 /* FirstViewController.swift */; };
 		D0C6AE871FB33E7C0010C882 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE861FB33E7C0010C882 /* SecondViewController.swift */; };
@@ -27,6 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D04C2B801FB34E38000C8813 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		D04C2B821FB35580000C8813 /* Gesta Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gesta Italic.ttf"; sourceTree = "<group>"; };
+		D04C2B831FB35580000C8813 /* Gesta Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gesta Light.ttf"; sourceTree = "<group>"; };
+		D04C2B841FB35580000C8813 /* Gesta Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gesta Bold.ttf"; sourceTree = "<group>"; };
+		D04C2B851FB35580000C8813 /* Gesta Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gesta Regular.ttf"; sourceTree = "<group>"; };
+		D04C2B8A1FB35828000C8813 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		D04C2B8C1FB364BC000C8813 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		D0C6AE7F1FB33E7C0010C882 /* UBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C6AE821FB33E7C0010C882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C6AE841FB33E7C0010C882 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -80,8 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				D0C6AEA51FB340800010C882 /* Model */,
-				D0C6AEA71FB3409D0010C882 /* Controller */,
 				D0C6AEA61FB340960010C882 /* View */,
+				D0C6AEA71FB3409D0010C882 /* Controller */,
 				D0C6AEA81FB340B20010C882 /* Supporting Files */,
 				D0C6AE901FB33E7C0010C882 /* Info.plist */,
 			);
@@ -100,6 +114,7 @@
 		D0C6AEA51FB340800010C882 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D04C2B8C1FB364BC000C8813 /* News.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +124,7 @@
 			children = (
 				D0C6AE8D1FB33E7C0010C882 /* LaunchScreen.storyboard */,
 				D0C6AE881FB33E7C0010C882 /* Main.storyboard */,
+				D04C2B8A1FB35828000C8813 /* NewsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,6 +134,7 @@
 			children = (
 				D0C6AE841FB33E7C0010C882 /* FirstViewController.swift */,
 				D0C6AE861FB33E7C0010C882 /* SecondViewController.swift */,
+				D04C2B801FB34E38000C8813 /* NewsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +142,10 @@
 		D0C6AEA81FB340B20010C882 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D04C2B841FB35580000C8813 /* Gesta Bold.ttf */,
+				D04C2B821FB35580000C8813 /* Gesta Italic.ttf */,
+				D04C2B831FB35580000C8813 /* Gesta Light.ttf */,
+				D04C2B851FB35580000C8813 /* Gesta Regular.ttf */,
 				D0C6AE8B1FB33E7C0010C882 /* Assets.xcassets */,
 				D0C6AE821FB33E7C0010C882 /* AppDelegate.swift */,
 			);
@@ -216,6 +237,10 @@
 			files = (
 				D0C6AE8F1FB33E7C0010C882 /* LaunchScreen.storyboard in Resources */,
 				D0C6AE8C1FB33E7C0010C882 /* Assets.xcassets in Resources */,
+				D04C2B871FB35580000C8813 /* Gesta Light.ttf in Resources */,
+				D04C2B881FB35580000C8813 /* Gesta Bold.ttf in Resources */,
+				D04C2B891FB35580000C8813 /* Gesta Regular.ttf in Resources */,
+				D04C2B861FB35580000C8813 /* Gesta Italic.ttf in Resources */,
 				D0C6AE8A1FB33E7C0010C882 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,8 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04C2B811FB34E38000C8813 /* NewsTableViewController.swift in Sources */,
 				D0C6AE871FB33E7C0010C882 /* SecondViewController.swift in Sources */,
+				D04C2B8B1FB35828000C8813 /* NewsTableViewCell.swift in Sources */,
 				D0C6AE831FB33E7C0010C882 /* AppDelegate.swift in Sources */,
+				D04C2B8D1FB364BC000C8813 /* News.swift in Sources */,
 				D0C6AE851FB33E7C0010C882 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

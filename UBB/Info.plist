@@ -51,5 +51,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Gesta Bold.ttf</string>
+		<string>Gesta Italic.ttf</string>
+		<string>Gesta Light.ttf</string>
+		<string>Gesta Regular.ttf</string>
+	</array>
 </dict>
 </plist>
