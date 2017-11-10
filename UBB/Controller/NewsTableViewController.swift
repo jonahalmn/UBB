@@ -121,7 +121,7 @@ class NewsTableViewController: UITableViewController {
         }
         if let i = news.index(where: { $0.id == id }) {
             let indexPath = IndexPath(row: i, section: 0)
-            self.tableView.reloadRows(at: [indexPath], with: .top)
+            self.tableView.reloadRows(at: [indexPath], with: .none)
         }
     }
     

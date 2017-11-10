@@ -17,13 +17,13 @@ class News {
     init(id: String, photo: UIImage, date: String, title: String) {
         self.id = id
         self.photo = photo
-        self.date = date
+        self.date = formatDate(date)
         self.title = title
     }
     
     init(id: String, photoStringURL: String, date: String, title: String) {
         self.id = id
-        self.date = date
+        self.date = formatDate(date)
         self.title = title
         self.photo = UIImage(named: "defaultPhoto")
         
@@ -43,5 +43,14 @@ class News {
             }
         }
         photoTask.resume()
+    }
+    
+    func formatDate(_ date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        return  dateFormatter.string(from: date!)
+        
     }
 }
