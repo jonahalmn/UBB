@@ -14,6 +14,14 @@ class NewsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let newsLoadedName = Notification.Name(rawValue: "NewsLoaded")
+        NotificationCenter.default.addObserver(self, selector: #selector(newsLoaded), name: newsLoadedName, object: nil)
+        
+        let photoLoadedName = Notification.Name(rawValue: "PhotoLoaded")
+        NotificationCenter.default.addObserver(self, selector: #selector(photoLoaded), name: photoLoadedName, object: nil)
+        
+        self.loadNews()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,7 +58,7 @@ class NewsTableViewController: UITableViewController {
         if let newsPhoto = news[indexPath.row].photo {
             cell.photo.image = newsPhoto
         } else {
-            cell.photo.image = UIImage(named: "defaultPhoto")
+            cell.photo.image = UIImage(named: "defaultPhoto")	
         }
 
         return cell
@@ -101,5 +109,29 @@ class NewsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @objc func newsLoaded() {
+        self.tableView.reloadData()
+    }
+    
+    @objc func photoLoaded(notification: Notification) {
+        guard let id = notification.object as? String,
+        id != "0" else {
+            return
+        }
+        if let i = news.index(where: { $0.id == id }) {
+            let indexPath = IndexPath(row: i, section: 0)
+            self.tableView.reloadRows(at: [indexPath], with: .top)
+        }
+    }
+    
+    private func loadNews() {
+        NewsManager.shared.get { (news) in
+            self.news = news
+            let name = Notification.Name(rawValue: "NewsLoaded")
+            let notification = Notification(name: name)
+            NotificationCenter.default.post(notification)
+        }
+    }
 
 }

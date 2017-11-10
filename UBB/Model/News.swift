@@ -9,22 +9,25 @@
 import UIKit
 
 class News {
+    var id: String
     var photo: UIImage?
-    var date: String
-    var title: String
+    var date: String = ""
+    var title: String = ""
     
-    init(photo: UIImage, date: String, title: String) {
+    init(id: String, photo: UIImage, date: String, title: String) {
+        self.id = id
         self.photo = photo
         self.date = date
         self.title = title
     }
     
-    init(photoStringURL: String, date: String, title: String) {
+    init(id: String, photoStringURL: String, date: String, title: String) {
+        self.id = id
         self.date = date
         self.title = title
+        self.photo = UIImage(named: "defaultPhoto")
         
         guard let photoURL = URL(string: photoStringURL) else {
-            log.warning("Couldn't create URL from \(photoStringURL)")
             return
         }
         
@@ -33,9 +36,12 @@ class News {
             if let response = data {
                 DispatchQueue.main.async {
                     self.photo = UIImage(data: response)
+                    let photoLoadedName = Notification.Name(rawValue: "PhotoLoaded")
+                    let notification = Notification(name: photoLoadedName, object: self.id, userInfo: nil)
+                    NotificationCenter.default.post(notification)
                 }
             }
         }
-        theTask.resume()
+        photoTask.resume()
     }
 }
