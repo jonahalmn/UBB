@@ -15,7 +15,7 @@ class SplashViewController: UIViewController {
         // Do any additional setup after loading the view.
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewsTableViewController")
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "tabBar")
             self.present(newViewController, animated: true, completion: nil)
         }
     }
