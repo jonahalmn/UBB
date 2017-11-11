@@ -1,25 +1,19 @@
 //
-//  SplashViewController.swift
+//  TicketingViewController.swift
 //  UBB
 //
-//  Created by Jonah Alle Monne on 10/11/2017.
-//  Copyright © 2017 Sébastien Zaza. All rights reserved.
+//  Created by Sébastien Gaya on 10/11/2017.
+//  Copyright © 2017 Sébastien Gaya. All rights reserved.
 //
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class TicketingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainTabBarController = storyBoard.instantiateViewController(withIdentifier: "MainTabBarController")
-            self.present(mainTabBarController, animated: true, completion: nil)
-            print("lol")
-        }
-        print("waiting")
     }
 
     override func didReceiveMemoryWarning() {
