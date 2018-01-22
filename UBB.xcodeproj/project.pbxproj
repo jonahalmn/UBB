@@ -24,6 +24,13 @@
 		D0C6AE9A1FB33E7C0010C882 /* UBBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE991FB33E7C0010C882 /* UBBTests.swift */; };
 		D0F66B3E1FB485A900A00554 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F66B3D1FB485A800A00554 /* NewsManager.swift */; };
 		F59FD5951FB5EE35000C67C2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */; };
+		F5A41E5B20161C4E00237C87 /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */; };
+		F5A41E6220161C9600237C87 /* Combinaison.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5C20161C9500237C87 /* Combinaison.swift */; };
+		F5A41E6320161C9600237C87 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5D20161C9500237C87 /* Game.swift */; };
+		F5A41E6420161C9600237C87 /* TimeChallengeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5E20161C9500237C87 /* TimeChallengeGame.swift */; };
+		F5A41E6520161C9600237C87 /* Modes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5F20161C9600237C87 /* Modes.swift */; };
+		F5A41E6620161C9600237C87 /* HighscorePersister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E6020161C9600237C87 /* HighscorePersister.swift */; };
+		F5A41E6720161C9600237C87 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E6120161C9600237C87 /* SoundPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +65,13 @@
 		D0C6AE9B1FB33E7C0010C882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F66B3D1FB485A800A00554 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewController.swift; sourceTree = "<group>"; };
+		F5A41E5C20161C9500237C87 /* Combinaison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combinaison.swift; sourceTree = "<group>"; };
+		F5A41E5D20161C9500237C87 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F5A41E5E20161C9500237C87 /* TimeChallengeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeChallengeGame.swift; sourceTree = "<group>"; };
+		F5A41E5F20161C9600237C87 /* Modes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modes.swift; sourceTree = "<group>"; };
+		F5A41E6020161C9600237C87 /* HighscorePersister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscorePersister.swift; sourceTree = "<group>"; };
+		F5A41E6120161C9600237C87 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +144,12 @@
 		D0C6AEA51FB340800010C882 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F5A41E5C20161C9500237C87 /* Combinaison.swift */,
+				F5A41E5D20161C9500237C87 /* Game.swift */,
+				F5A41E6020161C9600237C87 /* HighscorePersister.swift */,
+				F5A41E5F20161C9600237C87 /* Modes.swift */,
+				F5A41E6120161C9600237C87 /* SoundPlayer.swift */,
+				F5A41E5E20161C9500237C87 /* TimeChallengeGame.swift */,
 				D04C2B8C1FB364BC000C8813 /* News.swift */,
 				D0F66B3D1FB485A800A00554 /* NewsManager.swift */,
 			);
@@ -153,6 +173,7 @@
 				D0C6AE861FB33E7C0010C882 /* SecondViewController.swift */,
 				D04C2B801FB34E38000C8813 /* NewsTableViewController.swift */,
 				F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */,
+				F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -277,12 +298,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A41E5B20161C4E00237C87 /* UnlockViewController.swift in Sources */,
 				D04C2B811FB34E38000C8813 /* NewsTableViewController.swift in Sources */,
 				D0C6AE871FB33E7C0010C882 /* SecondViewController.swift in Sources */,
 				D04C2B8B1FB35828000C8813 /* NewsTableViewCell.swift in Sources */,
 				F59FD5951FB5EE35000C67C2 /* SplashViewController.swift in Sources */,
 				D0C6AE831FB33E7C0010C882 /* AppDelegate.swift in Sources */,
+				F5A41E6420161C9600237C87 /* TimeChallengeGame.swift in Sources */,
+				F5A41E6320161C9600237C87 /* Game.swift in Sources */,
+				F5A41E6220161C9600237C87 /* Combinaison.swift in Sources */,
 				D04C2B8D1FB364BC000C8813 /* News.swift in Sources */,
+				F5A41E6720161C9600237C87 /* SoundPlayer.swift in Sources */,
+				F5A41E6620161C9600237C87 /* HighscorePersister.swift in Sources */,
+				F5A41E6520161C9600237C87 /* Modes.swift in Sources */,
 				D0F66B3E1FB485A900A00554 /* NewsManager.swift in Sources */,
 				D0C6AE851FB33E7C0010C882 /* FirstViewController.swift in Sources */,
 			);
@@ -438,11 +466,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85CYHJQ6V6;
+				DEVELOPMENT_TEAM = J4YFA782YD;
 				INFOPLIST_FILE = UBB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sebastiengaya.UBB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonahallemonne.UBB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,11 +482,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85CYHJQ6V6;
+				DEVELOPMENT_TEAM = J4YFA782YD;
 				INFOPLIST_FILE = UBB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sebastiengaya.UBB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonahallemonne.UBB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
