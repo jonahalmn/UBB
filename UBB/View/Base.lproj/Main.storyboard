@@ -397,7 +397,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nD9-ii-Udv"/>
         <segue reference="ePC-8k-W7m"/>
     </inferredMetricsTieBreakers>
 </document>

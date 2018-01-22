@@ -24,6 +24,7 @@
 		D0C6AE9A1FB33E7C0010C882 /* UBBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE991FB33E7C0010C882 /* UBBTests.swift */; };
 		D0F66B3E1FB485A900A00554 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F66B3D1FB485A800A00554 /* NewsManager.swift */; };
 		F59FD5951FB5EE35000C67C2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */; };
+		F5A3E1F620162BF200577F6E /* valid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A3E1F52016291600577F6E /* valid.mp3 */; };
 		F5A41E5B20161C4E00237C87 /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */; };
 		F5A41E6220161C9600237C87 /* Combinaison.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5C20161C9500237C87 /* Combinaison.swift */; };
 		F5A41E6320161C9600237C87 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5D20161C9500237C87 /* Game.swift */; };
@@ -65,6 +66,7 @@
 		D0C6AE9B1FB33E7C0010C882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F66B3D1FB485A800A00554 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
 		F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F5A3E1F52016291600577F6E /* valid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = valid.mp3; sourceTree = "<group>"; };
 		F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewController.swift; sourceTree = "<group>"; };
 		F5A41E5C20161C9500237C87 /* Combinaison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combinaison.swift; sourceTree = "<group>"; };
 		F5A41E5D20161C9500237C87 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		D0C6AE811FB33E7C0010C882 /* UBB */ = {
 			isa = PBXGroup;
 			children = (
+				F5A3E1F4201628F700577F6E /* Sounds */,
 				D0C6AEA51FB340800010C882 /* Model */,
 				D0C6AEA61FB340960010C882 /* View */,
 				D0C6AEA71FB3409D0010C882 /* Controller */,
@@ -189,6 +192,14 @@
 				D0C6AE821FB33E7C0010C882 /* AppDelegate.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5A3E1F4201628F700577F6E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F5A3E1F52016291600577F6E /* valid.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A3E1F620162BF200577F6E /* valid.mp3 in Resources */,
 				D0C6AE8F1FB33E7C0010C882 /* LaunchScreen.storyboard in Resources */,
 				D0C6AE8C1FB33E7C0010C882 /* Assets.xcassets in Resources */,
 				D04C2B871FB35580000C8813 /* Gesta Light.ttf in Resources */,
