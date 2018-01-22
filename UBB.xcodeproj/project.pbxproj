@@ -53,6 +53,7 @@
 		D04C2B851FB35580000C8813 /* Gesta Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gesta Regular.ttf"; sourceTree = "<group>"; };
 		D04C2B8A1FB35828000C8813 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		D04C2B8C1FB364BC000C8813 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		D0A3BE8620163870000A5601 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D0C6AE7F1FB33E7C0010C882 /* UBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C6AE821FB33E7C0010C882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C6AE841FB33E7C0010C882 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +185,7 @@
 		D0C6AEA81FB340B20010C882 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0A3BE8620163870000A5601 /* GoogleService-Info.plist */,
 				D04C2B841FB35580000C8813 /* Gesta Bold.ttf */,
 				D04C2B821FB35580000C8813 /* Gesta Italic.ttf */,
 				D04C2B831FB35580000C8813 /* Gesta Light.ttf */,
@@ -478,7 +480,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J4YFA782YD;
+				DEVELOPMENT_TEAM = 85CYHJQ6V6;
 				INFOPLIST_FILE = UBB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -494,7 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J4YFA782YD;
+				DEVELOPMENT_TEAM = 85CYHJQ6V6;
 				INFOPLIST_FILE = UBB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
