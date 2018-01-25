@@ -15,7 +15,12 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        Alamofire.request("https://api.sebastiengaya.fr").responseJSON { (response) in
+        let params: Parameters = [
+            "user_id": "NiceUserID",
+            "game_id": 1
+        ]
+        
+        Alamofire.request("https://api.sebastiengaya.fr", method: .post, parameters: params).responseJSON { (response) in
             print("JSON: \(response)")
         }
     }
