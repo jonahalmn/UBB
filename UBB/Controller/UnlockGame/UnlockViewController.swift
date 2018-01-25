@@ -31,13 +31,13 @@ class UnlockViewController: UIViewController {
     }
     
     func hideX(){
-        for var i in 0...combinaisonLabel.count - 1 {
+        for i in 0...combinaisonLabel.count - 1 {
             combinaisonLabel[i].isHidden = true
         }
     }
     
     func seeX(){
-        for var i in 0...combinaisonLabel.count - 1 {
+        for i in 0...combinaisonLabel.count - 1 {
             combinaisonLabel[i].isHidden = false
         }
     }
@@ -163,7 +163,7 @@ class UnlockViewController: UIViewController {
     }
     
     @IBAction func restartGame(_ sender: Any) {
-        for var i in 0...self.combinaisonLabel.count - 1{
+        for i in 0...self.combinaisonLabel.count - 1{
             combinaisonLabel[i].text = "X"
         }
         if(Modes.name == .chrono){

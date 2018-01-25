@@ -102,8 +102,7 @@ class QRScannerController01: UIViewController, AVCaptureMetadataOutputObjectsDel
             // metadataObj.stringValue
             if Int(metadataObj.stringValue!) != nil{
             if Int(metadataObj.stringValue!)! < allQuestions.list.count {
-            var currentQuestion = allQuestions.list[Int(metadataObj.stringValue!)!]
-            
+            let currentQuestion = allQuestions.list[Int(metadataObj.stringValue!)!]
             print(currentQuestion.title)
             }else{
                 let alert = UIAlertController(title: "Erreur", message: "Ce QR code est faux", preferredStyle: .alert)

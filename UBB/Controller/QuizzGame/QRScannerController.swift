@@ -105,7 +105,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         print(code)
         if Int(code) != nil{
             if Int(code)! < allQuestions.list.count {
-                var currentQuestion = allQuestions.list[Int(code)!]
+                let currentQuestion = allQuestions.list[Int(code)!]
                 
                 print(currentQuestion.title)
             }else{
