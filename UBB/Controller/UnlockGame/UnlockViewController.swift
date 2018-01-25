@@ -27,6 +27,9 @@ class UnlockViewController: UIViewController {
     var manager = CMMotionManager()
     var codeToSend = 0
     
+    @IBAction func stopGame(_ sender: Any) {
+        game.status = .over
+    }
     
     func hideX(){
         for var i in 0...combinaisonLabel.count - 1 {

@@ -23,8 +23,16 @@
 		D0C6AE8F1FB33E7C0010C882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C6AE8D1FB33E7C0010C882 /* LaunchScreen.storyboard */; };
 		D0C6AE9A1FB33E7C0010C882 /* UBBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE991FB33E7C0010C882 /* UBBTests.swift */; };
 		D0F66B3E1FB485A900A00554 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F66B3D1FB485A800A00554 /* NewsManager.swift */; };
+		F571596A201885350009CD38 /* scan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C42698201881EB009A2CCD /* scan.mp3 */; };
+		F571596B20188B080009CD38 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4269C201882E4009A2CCD /* Question.swift */; };
+		F571596C20188B080009CD38 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4269D201882E4009A2CCD /* QuestionBank.swift */; };
+		F571596D20188B080009CD38 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C426992018825B009A2CCD /* QRCodeViewController.swift */; };
+		F571596F20188B080009CD38 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4269A2018825B009A2CCD /* QuestionViewController.swift */; };
+		F57159712018C3190009CD38 /* QRScannerController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57159702018C3190009CD38 /* QRScannerController copy.swift */; };
+		F57159722018C3FC0009CD38 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4269B2018825B009A2CCD /* QRScannerController.swift */; };
 		F59FD5951FB5EE35000C67C2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */; };
 		F5A3E1F620162BF200577F6E /* valid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A3E1F52016291600577F6E /* valid.mp3 */; };
+		F5A3E1FA20172F9400577F6E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A3E1F920172F9400577F6E /* HomeViewController.swift */; };
 		F5A41E5B20161C4E00237C87 /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */; };
 		F5A41E6220161C9600237C87 /* Combinaison.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5C20161C9500237C87 /* Combinaison.swift */; };
 		F5A41E6320161C9600237C87 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5D20161C9500237C87 /* Game.swift */; };
@@ -66,8 +74,10 @@
 		D0C6AE991FB33E7C0010C882 /* UBBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBBTests.swift; sourceTree = "<group>"; };
 		D0C6AE9B1FB33E7C0010C882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F66B3D1FB485A800A00554 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
+		F57159702018C3190009CD38 /* QRScannerController copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QRScannerController copy.swift"; sourceTree = "<group>"; };
 		F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		F5A3E1F52016291600577F6E /* valid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = valid.mp3; sourceTree = "<group>"; };
+		F5A3E1F920172F9400577F6E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockViewController.swift; sourceTree = "<group>"; };
 		F5A41E5C20161C9500237C87 /* Combinaison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combinaison.swift; sourceTree = "<group>"; };
 		F5A41E5D20161C9500237C87 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -75,6 +85,12 @@
 		F5A41E5F20161C9600237C87 /* Modes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modes.swift; sourceTree = "<group>"; };
 		F5A41E6020161C9600237C87 /* HighscorePersister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscorePersister.swift; sourceTree = "<group>"; };
 		F5A41E6120161C9600237C87 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		F5C42698201881EB009A2CCD /* scan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scan.mp3; sourceTree = "<group>"; };
+		F5C426992018825B009A2CCD /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		F5C4269A2018825B009A2CCD /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		F5C4269B2018825B009A2CCD /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		F5C4269C201882E4009A2CCD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		F5C4269D201882E4009A2CCD /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,13 +164,9 @@
 		D0C6AEA51FB340800010C882 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F5A41E5C20161C9500237C87 /* Combinaison.swift */,
-				F5A41E5D20161C9500237C87 /* Game.swift */,
-				F5A41E6020161C9600237C87 /* HighscorePersister.swift */,
-				F5A41E5F20161C9600237C87 /* Modes.swift */,
-				F5A41E6120161C9600237C87 /* SoundPlayer.swift */,
-				F5A41E5E20161C9500237C87 /* TimeChallengeGame.swift */,
+				F5C4269520187F85009A2CCD /* UnlockGame */,
 				D04C2B8C1FB364BC000C8813 /* News.swift */,
+				F5C42696201880C7009A2CCD /* QuizzGame */,
 				D0F66B3D1FB485A800A00554 /* NewsManager.swift */,
 			);
 			path = Model;
@@ -177,7 +189,9 @@
 				D0C6AE861FB33E7C0010C882 /* SecondViewController.swift */,
 				D04C2B801FB34E38000C8813 /* NewsTableViewController.swift */,
 				F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */,
-				F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */,
+				F5C42697201880D4009A2CCD /* QuizzGame */,
+				F5C4269420187F59009A2CCD /* UnlockGame */,
+				F5A3E1F920172F9400577F6E /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -200,8 +214,50 @@
 			isa = PBXGroup;
 			children = (
 				F5A3E1F52016291600577F6E /* valid.mp3 */,
+				F5C42698201881EB009A2CCD /* scan.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		F5C4269420187F59009A2CCD /* UnlockGame */ = {
+			isa = PBXGroup;
+			children = (
+				F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */,
+			);
+			path = UnlockGame;
+			sourceTree = "<group>";
+		};
+		F5C4269520187F85009A2CCD /* UnlockGame */ = {
+			isa = PBXGroup;
+			children = (
+				F5A41E5C20161C9500237C87 /* Combinaison.swift */,
+				F5A41E5D20161C9500237C87 /* Game.swift */,
+				F5A41E6020161C9600237C87 /* HighscorePersister.swift */,
+				F5A41E5F20161C9600237C87 /* Modes.swift */,
+				F5A41E6120161C9600237C87 /* SoundPlayer.swift */,
+				F5A41E5E20161C9500237C87 /* TimeChallengeGame.swift */,
+			);
+			path = UnlockGame;
+			sourceTree = "<group>";
+		};
+		F5C42696201880C7009A2CCD /* QuizzGame */ = {
+			isa = PBXGroup;
+			children = (
+				F5C4269C201882E4009A2CCD /* Question.swift */,
+				F5C4269D201882E4009A2CCD /* QuestionBank.swift */,
+			);
+			path = QuizzGame;
+			sourceTree = "<group>";
+		};
+		F5C42697201880D4009A2CCD /* QuizzGame */ = {
+			isa = PBXGroup;
+			children = (
+				F5C426992018825B009A2CCD /* QRCodeViewController.swift */,
+				F5C4269B2018825B009A2CCD /* QRScannerController.swift */,
+				F57159702018C3190009CD38 /* QRScannerController copy.swift */,
+				F5C4269A2018825B009A2CCD /* QuestionViewController.swift */,
+			);
+			path = QuizzGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F571596A201885350009CD38 /* scan.mp3 in Resources */,
 				F5A3E1F620162BF200577F6E /* valid.mp3 in Resources */,
 				D0C6AE8F1FB33E7C0010C882 /* LaunchScreen.storyboard in Resources */,
 				D0C6AE8C1FB33E7C0010C882 /* Assets.xcassets in Resources */,
@@ -312,8 +369,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57159722018C3FC0009CD38 /* QRScannerController.swift in Sources */,
+				F571596F20188B080009CD38 /* QuestionViewController.swift in Sources */,
 				F5A41E5B20161C4E00237C87 /* UnlockViewController.swift in Sources */,
 				D04C2B811FB34E38000C8813 /* NewsTableViewController.swift in Sources */,
+				F57159712018C3190009CD38 /* QRScannerController copy.swift in Sources */,
 				D0C6AE871FB33E7C0010C882 /* SecondViewController.swift in Sources */,
 				D04C2B8B1FB35828000C8813 /* NewsTableViewCell.swift in Sources */,
 				F59FD5951FB5EE35000C67C2 /* SplashViewController.swift in Sources */,
@@ -323,10 +383,14 @@
 				F5A41E6220161C9600237C87 /* Combinaison.swift in Sources */,
 				D04C2B8D1FB364BC000C8813 /* News.swift in Sources */,
 				F5A41E6720161C9600237C87 /* SoundPlayer.swift in Sources */,
+				F5A3E1FA20172F9400577F6E /* HomeViewController.swift in Sources */,
 				F5A41E6620161C9600237C87 /* HighscorePersister.swift in Sources */,
 				F5A41E6520161C9600237C87 /* Modes.swift in Sources */,
 				D0F66B3E1FB485A900A00554 /* NewsManager.swift in Sources */,
 				D0C6AE851FB33E7C0010C882 /* FirstViewController.swift in Sources */,
+				F571596B20188B080009CD38 /* Question.swift in Sources */,
+				F571596C20188B080009CD38 /* QuestionBank.swift in Sources */,
+				F571596D20188B080009CD38 /* QRCodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85CYHJQ6V6;
+				DEVELOPMENT_TEAM = J4YFA782YD;
 				INFOPLIST_FILE = UBB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -496,7 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85CYHJQ6V6;
+				DEVELOPMENT_TEAM = J4YFA782YD;
 				INFOPLIST_FILE = UBB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

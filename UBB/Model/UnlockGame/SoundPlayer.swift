@@ -24,4 +24,16 @@ class SoundPlayer {
         audioPlayer!.prepareToPlay()
         audioPlayer!.play()
     }
+    
+    static func scanSound() -> Void {
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "scan", ofType: "mp3")!)
+        print(alertSound)
+        
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try! AVAudioSession.sharedInstance().setActive(true)
+        
+        try! audioPlayer = AVAudioPlayer(contentsOf: alertSound)
+        audioPlayer!.prepareToPlay()
+        audioPlayer!.play()
+    }
 }
