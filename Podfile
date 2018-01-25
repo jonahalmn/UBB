@@ -11,6 +11,8 @@ pod 'Firebase', '~>3.17'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'SVProgressHUD'
+pod 'SwiftyJSON'
+pod 'Alamofire'
 
   target 'UBBTests' do
     inherit! :search_paths

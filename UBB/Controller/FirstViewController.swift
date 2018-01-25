@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Alamofire
 
 class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        Alamofire.request("https://api.sebastiengaya.fr").responseJSON { (response) in
+            print("JSON: \(response)")
+        }
     }
 
     override func didReceiveMemoryWarning() {

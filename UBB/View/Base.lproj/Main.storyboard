@@ -8,11 +8,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Gesta Regular.ttf">
-            <string>GestaW01-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
@@ -95,68 +90,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-833" y="672"/>
-        </scene>
-        <!--News-->
-        <scene sceneID="r4J-vR-HbV">
-            <objects>
-                <tableViewController storyboardIdentifier="NewsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="USy-SK-1QW" customClass="NewsTableViewController" customModule="UBB" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lyR-wT-gIP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableViewCell" rowHeight="90" id="aec-BB-5Ne" customClass="NewsTableViewCell" customModule="UBB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aec-BB-5Ne" id="te3-IU-bIY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZHd-ao-VDc">
-                                            <rect key="frame" x="9" y="11" width="131" height="68"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBN-u5-XD6">
-                                            <rect key="frame" x="148" y="11" width="211" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="GestaW01-Regular" family="GestaW01-Regular" pointSize="17"/>
-                                            <color key="textColor" red="0.50307500809585493" green="0.50815657383419688" blue="0.50815657383419688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TitleLabel" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="211" translatesAutoresizingMaskIntoConstraints="NO" id="rUL-NK-5dw">
-                                            <rect key="frame" x="148" y="34" width="211" height="45"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dateLabel" destination="kBN-u5-XD6" id="ree-1T-mxZ"/>
-                                    <outlet property="photo" destination="ZHd-ao-VDc" id="bCl-Ko-1x4"/>
-                                    <outlet property="titleLabel" destination="rUL-NK-5dw" id="mf2-yh-Fm4"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="USy-SK-1QW" id="81A-sJ-0Lz"/>
-                            <outlet property="delegate" destination="USy-SK-1QW" id="AA3-bE-e9u"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="News" image="first" id="adP-Rk-gx3"/>
-                    <navigationItem key="navigationItem" title="News" id="jpG-c4-UoI">
-                        <barButtonItem key="backBarButtonItem" title="Refresh" id="jdo-dK-6Vm"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="yyp-vB-oRA">
-                            <connections>
-                                <action selector="didTapRefreshButton:" destination="USy-SK-1QW" id="jq0-xb-bWe"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YeX-aT-1R2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="326" y="1448"/>
         </scene>
         <!--RegisterViewController-->
         <scene sceneID="nBh-8N-eN2">
@@ -365,23 +298,6 @@
             </objects>
             <point key="canvasLocation" x="2056.8000000000002" y="2353.6731634182911"/>
         </scene>
-        <!--News-->
-        <scene sceneID="Jwe-Hd-0GE">
-            <objects>
-                <navigationController id="UGg-EE-wgb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" image="second" id="7mC-yK-fFr"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f0f-2u-eYd">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="USy-SK-1QW" kind="relationship" relationship="rootViewController" id="Ecr-dQ-ljo"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uZ8-CQ-4Yc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-834" y="1448"/>
-        </scene>
         <!--Splash View Controller-->
         <scene sceneID="8pY-Xt-5OY">
             <objects>
@@ -421,7 +337,6 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="UGg-EE-wgb" kind="relationship" relationship="viewControllers" id="X2W-al-qVh"/>
                         <segue destination="RcJ-mm-an3" kind="relationship" relationship="viewControllers" id="okt-PN-CS5"/>
                     </connections>
                 </tabBarController>
