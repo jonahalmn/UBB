@@ -16,7 +16,6 @@ class UnlockViewController: UIViewController {
     @IBOutlet weak var gameHint: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var highscoreLabel: UILabel!
-    @IBOutlet weak var lockerview: UIView!
     @IBOutlet weak var button: UIImageView!
     
     @IBOutlet var combinaisonLabel: [UILabel]!
@@ -26,7 +25,7 @@ class UnlockViewController: UIViewController {
     var persister = HighscorePersister()
     var manager = CMMotionManager()
     var codeToSend = 0
-    
+
     @IBAction func stopGame(_ sender: Any) {
         game.status = .over
     }
