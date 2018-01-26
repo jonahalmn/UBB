@@ -12,7 +12,7 @@ import UIKit
 class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
-    
+    var persister = highscorePersister()
     var allQuestions = QuestionBank()
     var score = 0
     

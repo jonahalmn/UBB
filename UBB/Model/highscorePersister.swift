@@ -36,7 +36,7 @@ class highscorePersister {
     }
     
     func resetQuestion(){
-        self.answered = []
+        self.answered = [] 
         UserDefaults.standard.set(self.answered,forKey:"Answered")
     }
 }

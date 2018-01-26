@@ -29,6 +29,11 @@ class UnlockViewController: UIViewController {
     var manager = CMMotionManager()
     var codeToSend = 0
     var timer = Timer()
+    var request : Stat = .notsent
+    
+    enum Stat {
+        case notsent, sent
+    }
 
     @IBAction func stopGame(_ sender: Any) {
         game.status = .over
@@ -109,6 +114,8 @@ class UnlockViewController: UIViewController {
             timer.invalidate()
             game.status = .over
             self.gameHint.text = "Partie terminée"
+            if request != .sent {
+            self.request = .sent
             self.gameProgression.text = "Inscription en cours..."
             if let userID = FIRAuth.auth()?.currentUser?.uid {
                 let params: Parameters = [
@@ -138,7 +145,7 @@ class UnlockViewController: UIViewController {
                     }
                 }
             }
-            
+            }
             persister.setHighscore(score: game.currentTime)
             setHighScoreLabel(persister.highscore)
         }
