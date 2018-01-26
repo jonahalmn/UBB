@@ -78,6 +78,9 @@ class UnlockViewController: UIViewController {
                     self?.codeToSend = Int(rotation * (100 / -6))
                     if Modes.name == .classic{
                         self?.testInput() // Normal Mode
+                        if ((self?.game.currentTime)! > 90.0){
+                            self?.game.status = .over
+                        }
                     }else{
                         self?.timeMode()
                     }
@@ -111,9 +114,10 @@ class UnlockViewController: UIViewController {
             }
             
         }else{
+	    self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fond.coffre.jpg")!)
             timer.invalidate()
             game.status = .over
-            self.gameHint.text = "Partie terminée"
+            self.gameHint.text = "BRAVO !"
             if request != .sent {
             self.request = .sent
             self.gameProgression.text = "Inscription en cours..."
@@ -159,7 +163,7 @@ class UnlockViewController: UIViewController {
         
     }
     
-    // TIME MODE ============================
+    // TIME MODE
     
     func timeMode(){
         self.gameHint.text = "\(timeGame.level - timeGame.currentGame.step) nombres avant le prochain niveau"
