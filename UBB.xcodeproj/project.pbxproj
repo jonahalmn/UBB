@@ -32,6 +32,7 @@
 		D0C6AE8F1FB33E7C0010C882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C6AE8D1FB33E7C0010C882 /* LaunchScreen.storyboard */; };
 		D0C6AE9A1FB33E7C0010C882 /* UBBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE991FB33E7C0010C882 /* UBBTests.swift */; };
 		D0F497E4201A8D0E00C8F60C /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */; };
+		F56A54A8201B43C600B67FD1 /* highscorePersister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A54A7201B43C600B67FD1 /* highscorePersister.swift */; };
 		F571596A201885350009CD38 /* scan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C42698201881EB009A2CCD /* scan.mp3 */; };
 		F571596B20188B080009CD38 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4269C201882E4009A2CCD /* Question.swift */; };
 		F571596C20188B080009CD38 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4269D201882E4009A2CCD /* QuestionBank.swift */; };
@@ -91,6 +92,7 @@
 		D0C6AE991FB33E7C0010C882 /* UBBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBBTests.swift; sourceTree = "<group>"; };
 		D0C6AE9B1FB33E7C0010C882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3E917C6A8AADB64AA92093C /* Pods-UBBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBBTests/Pods-UBBTests.release.xcconfig"; sourceTree = "<group>"; };
+		F56A54A7201B43C600B67FD1 /* highscorePersister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = highscorePersister.swift; sourceTree = "<group>"; };
 		F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		F5A3E1F52016291600577F6E /* valid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = valid.mp3; sourceTree = "<group>"; };
 		F5A3E1F920172F9400577F6E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			children = (
 				F5C4269520187F85009A2CCD /* UnlockGame */,
 				F5C42696201880C7009A2CCD /* QuizzGame */,
+				F56A54A7201B43C600B67FD1 /* highscorePersister.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F56A54A8201B43C600B67FD1 /* highscorePersister.swift in Sources */,
 				D0F497E4201A8D0E00C8F60C /* UnlockViewController.swift in Sources */,
 				F57159722018C3FC0009CD38 /* QRScannerController.swift in Sources */,
 				F571596F20188B080009CD38 /* QuestionViewController.swift in Sources */,
