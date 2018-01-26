@@ -31,7 +31,6 @@
 		F571596C20188B080009CD38 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4269D201882E4009A2CCD /* QuestionBank.swift */; };
 		F571596D20188B080009CD38 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C426992018825B009A2CCD /* QRCodeViewController.swift */; };
 		F571596F20188B080009CD38 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4269A2018825B009A2CCD /* QuestionViewController.swift */; };
-		F57159712018C3190009CD38 /* QRScannerController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57159702018C3190009CD38 /* QRScannerController copy.swift */; };
 		F57159722018C3FC0009CD38 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4269B2018825B009A2CCD /* QRScannerController.swift */; };
 		F59FD5951FB5EE35000C67C2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */; };
 		F5A3E1F620162BF200577F6E /* valid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A3E1F52016291600577F6E /* valid.mp3 */; };
@@ -83,7 +82,6 @@
 		D0C6AE991FB33E7C0010C882 /* UBBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBBTests.swift; sourceTree = "<group>"; };
 		D0C6AE9B1FB33E7C0010C882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3E917C6A8AADB64AA92093C /* Pods-UBBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBBTests/Pods-UBBTests.release.xcconfig"; sourceTree = "<group>"; };
-		F57159702018C3190009CD38 /* QRScannerController copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QRScannerController copy.swift"; sourceTree = "<group>"; };
 		F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		F5A3E1F52016291600577F6E /* valid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = valid.mp3; sourceTree = "<group>"; };
 		F5A3E1F920172F9400577F6E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 			children = (
 				F5C426992018825B009A2CCD /* QRCodeViewController.swift */,
 				F5C4269B2018825B009A2CCD /* QRScannerController.swift */,
-				F57159702018C3190009CD38 /* QRScannerController copy.swift */,
 				F5C4269A2018825B009A2CCD /* QuestionViewController.swift */,
 			);
 			path = QuizzGame;
@@ -514,7 +511,6 @@
 				D0F497E4201A8D0E00C8F60C /* UnlockViewController.swift in Sources */,
 				F57159722018C3FC0009CD38 /* QRScannerController.swift in Sources */,
 				F571596F20188B080009CD38 /* QuestionViewController.swift in Sources */,
-				F57159712018C3190009CD38 /* QRScannerController copy.swift in Sources */,
 				D078FBD42017445B003998EE /* LoginViewController.swift in Sources */,
 				D0C6AE871FB33E7C0010C882 /* SecondViewController.swift in Sources */,
 				F59FD5951FB5EE35000C67C2 /* SplashViewController.swift in Sources */,
