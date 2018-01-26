@@ -107,6 +107,7 @@ class UnlockViewController: UIViewController {
             
         }else{
             timer.invalidate()
+            game.status = .over
             self.gameHint.text = "Partie terminée"
             self.gameProgression.text = "Inscription en cours..."
             if let userID = FIRAuth.auth()?.currentUser?.uid {
