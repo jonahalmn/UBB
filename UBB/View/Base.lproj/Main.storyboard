@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E9J-PZ-bIm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E9J-PZ-bIm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="AvenirNextCondensed.ttc">
-            <string>AvenirNextCondensed-Medium</string>
+            <string>AvenirNextCondensed-Bold</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="MavenPro-Bold.ttf">
+            <string>MavenPro-Bold</string>
+        </array>
+        <array key="MavenPro-Regular.ttf">
+            <string>MavenPro-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -621,22 +630,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNS-RG-39U">
-                                <rect key="frame" x="89" y="34" width="197" height="69"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="50"/>
-                                <color key="textColor" red="0.99215686270000003" green="0.81568627449999997" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5K6-Yh-hfb">
-                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5K6-Yh-hfb">
+                                <rect key="frame" x="4" y="202" width="375" height="667"/>
                                 <color key="tintColor" red="0.99215686270000003" green="0.81568627449999997" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="focus"/>
+                                <state key="normal" title="Cliquez ici">
+                                    <color key="titleColor" red="0.30980392156862746" green="0.086274509803921567" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="cST-PR-Abo" kind="presentation" id="7GU-6A-cpY"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="palette" translatesAutoresizingMaskIntoConstraints="NO" id="PFJ-ne-20w">
+                                <rect key="frame" x="-3" y="0.0" width="378" height="54"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Préparez-vous à scanner le QR-Code le plus proche de vous" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNS-RG-39U">
+                                <rect key="frame" x="41" y="329" width="300" height="157"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="29"/>
+                                <color key="textColor" red="0.30980392156862746" green="0.086274509803921567" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196078430000004" green="0.36470588240000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bNS-RG-39U" firstAttribute="top" secondItem="bit-Jj-Xgg" secondAttribute="bottom" constant="14" id="4Ed-4f-T70"/>
                             <constraint firstItem="bNS-RG-39U" firstAttribute="centerX" secondItem="XII-0o-Q21" secondAttribute="centerX" id="AwI-HX-7oR"/>
@@ -651,7 +666,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fG7-vl-RDN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-834" y="-1507"/>
+            <point key="canvasLocation" x="-834.39999999999998" y="-1507.1964017991006"/>
         </scene>
         <!--Scanner Controller-->
         <scene sceneID="GiO-Xg-3Qd">
@@ -665,17 +680,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-0y-sQX">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-0y-sQX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8b-13-hNG">
-                                        <rect key="frame" x="165.5" y="23" width="44" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8b-13-hNG">
+                                        <rect key="frame" x="168" y="17" width="39" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qp-mm-Fif">
-                                        <rect key="frame" x="15" y="24" width="18" height="18"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qp-mm-Fif">
+                                        <rect key="frame" x="16" y="17" width="18" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="jDg-wq-7if"/>
                                         </constraints>
@@ -686,7 +701,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.30980392156862746" green="0.086274509803921567" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="2qp-mm-Fif" firstAttribute="top" secondItem="BEn-0y-sQX" secondAttribute="top" constant="24" id="JQY-E0-3NS"/>
                                     <constraint firstAttribute="bottom" secondItem="o8b-13-hNG" secondAttribute="bottom" constant="8" id="JQh-9d-y9C"/>
@@ -696,9 +711,9 @@
                                     <constraint firstItem="o8b-13-hNG" firstAttribute="centerX" secondItem="BEn-0y-sQX" secondAttribute="centerX" id="kAo-UC-hci"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vo-8J-lYm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aucun QR Code détecté" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vo-8J-lYm">
                                 <rect key="frame" x="0.0" y="627" width="375" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.30980392156862746" green="0.086274509803921567" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="2gk-FP-7kX"/>
                                 </constraints>
@@ -707,7 +722,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.34999999403953552" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CWu-tu-giH">
-                                <rect key="frame" x="-1" y="55" width="376" height="576"/>
+                                <rect key="frame" x="-1" y="55" width="376" height="572"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O13-7f-ZpP">
@@ -738,7 +753,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eE5-D2-1m0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gCG-jh-0Qu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="153" y="-1507"/>
+            <point key="canvasLocation" x="152.80000000000001" y="-1507.1964017991006"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="w4p-u2-fDj">
@@ -752,40 +767,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bravo, vous démarrez le jeu !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CP8-i0-IKx">
-                                <rect key="frame" x="38" y="67" width="299" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quel est le joueur qui a la plus longue barbe ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVh-IO-Kat">
+                                <rect key="frame" x="54" y="140" width="295" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="18"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quel est le joueur qui a la plus longue barbe ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVh-IO-Kat">
-                                <rect key="frame" x="12" y="257" width="347" height="21"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeu-Yr-c88">
+                                <rect key="frame" x="80" y="245" width="238" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeu-Yr-c88">
-                                <rect key="frame" x="25" y="347" width="107" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="S. TAOFIFENUA"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="16"/>
+                                <state key="normal" title="S. TAOFIFENUA">
+                                    <color key="titleColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="UserTapAnswer:" destination="6u1-o7-MxA" eventType="touchUpInside" id="Jh0-H1-aJH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wu-7Y-f5v">
-                                <rect key="frame" x="168" y="347" width="100" height="30"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVN-mf-vXB">
+                                <rect key="frame" x="80" y="389" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="H. CHALMERS"/>
-                                <connections>
-                                    <action selector="UserTapAnswer:" destination="6u1-o7-MxA" eventType="touchUpInside" id="4su-3G-gST"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVN-mf-vXB">
-                                <rect key="frame" x="309" y="347" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="J.REY"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="16"/>
+                                <state key="normal" title="J.REY">
+                                    <color key="titleColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="UserTapAnswer:" destination="6u1-o7-MxA" eventType="touchUpInside" id="QDs-sJ-FWz"/>
                                 </connections>
@@ -797,30 +803,60 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNo-Ep-rlH">
-                                <rect key="frame" x="25" y="488" width="334" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QUESTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dO8-m9-TNU">
+                                <rect key="frame" x="38" y="20" width="211" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="28"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjc-xG-IFY">
-                                <rect key="frame" x="126" y="558" width="123" height="30"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="palette" translatesAutoresizingMaskIntoConstraints="NO" id="Vmc-1j-21p">
+                                <rect key="frame" x="38" y="70" width="426" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sUC-dz-rTs">
+                                <rect key="frame" x="38" y="121" width="1" height="319"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Question suivante"/>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1o-p3-YnJ">
+                                <rect key="frame" x="-1" y="513" width="376" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNo-Ep-rlH">
+                                        <rect key="frame" x="21" y="8" width="334" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjc-xG-IFY">
+                                        <rect key="frame" x="104" y="73" width="168" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="18"/>
+                                        <state key="normal" title="Question suivante">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="cST-PR-Abo" kind="show" id="YlC-6X-mZh">
+                                                <nil key="action"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wu-7Y-f5v">
+                                <rect key="frame" x="80" y="318" width="256" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="16"/>
+                                <state key="normal" title="H. CHALMERS">
+                                    <color key="titleColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="cST-PR-Abo" kind="show" id="YlC-6X-mZh">
-                                        <nil key="action"/>
-                                    </segue>
+                                    <action selector="UserTapAnswer:" destination="6u1-o7-MxA" eventType="touchUpInside" id="4su-3G-gST"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Idde la quesiton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dO8-m9-TNU">
-                                <rect key="frame" x="143" y="159" width="122" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="f0o-xe-m2v"/>
@@ -837,15 +873,117 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQC-2u-fr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="-1507"/>
+            <point key="canvasLocation" x="1032.8" y="-1507.1964017991006"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OCI-co-mvU">
+            <objects>
+                <viewController id="6ZH-qL-NGF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wnW-vN-fVB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VOTRE SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR2-yD-j4r">
+                                <rect key="frame" x="108" y="72" width="158" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="18"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BRAVO VOUS AVEZ GAGNÉ !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRw-3s-MwE">
+                                <rect key="frame" x="65" y="300" width="245" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="18"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VOTRE TICKET EST SUR VOTRE ESPACE PROFIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-ye-cBM">
+                                <rect key="frame" x="36" y="322" width="302" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Fm-ug-SrO">
+                                <rect key="frame" x="0.0" y="145" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eWZ-2e-to9">
+                                        <rect key="frame" x="0.0" y="19" width="375" height="4"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UBBFCG_AVEI_CAZEAUX_LESGOURGUES_CONNOR" translatesAutoresizingMaskIntoConstraints="NO" id="r5C-nY-eGe">
+                                <rect key="frame" x="-34" y="376" width="444" height="291"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="VWY-Fr-vds"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSw-NY-1Dl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797.5999999999999" y="-1507.1964017991006"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xiq-dC-mMy">
+            <objects>
+                <viewController id="Ndp-CX-taf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S4F-Qy-wE5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VOTRE SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8D-rr-Gy1">
+                                <rect key="frame" x="108" y="72" width="158" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="18"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f28-KJ-I3y">
+                                <rect key="frame" x="0.0" y="145" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ENY-Cg-MUn">
+                                        <rect key="frame" x="0.0" y="19" width="375" height="4"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VOUS AVEZ PERDU ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM3-jh-aVI">
+                                <rect key="frame" x="95" y="311" width="185" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="18"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.086274509799999996" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UBBST_BRAID" translatesAutoresizingMaskIntoConstraints="NO" id="Fdv-b8-EKS">
+                                <rect key="frame" x="-47" y="360" width="469" height="307"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="nfL-kC-at4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUv-jK-Z6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2533.5999999999999" y="-1507.1964017991006"/>
         </scene>
     </scenes>
     <resources>
+        <image name="UBBFCG_AVEI_CAZEAUX_LESGOURGUES_CONNOR" width="3681" height="2823"/>
+        <image name="UBBST_BRAID" width="4919" height="4000"/>
         <image name="button" width="114" height="132"/>
         <image name="buttonbkg" width="285" height="301"/>
         <image name="chaban" width="364" height="335"/>
         <image name="cross" width="40" height="40"/>
-        <image name="focus" width="150" height="150"/>
         <image name="homepic1" width="365" height="436"/>
         <image name="homepic2" width="511" height="480"/>
         <image name="jeu" width="187" height="333"/>
@@ -858,7 +996,7 @@
         <image name="user" width="31" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7GU-6A-cpY"/>
+        <segue reference="YlC-6X-mZh"/>
         <segue reference="sH6-6a-Bxw"/>
     </inferredMetricsTieBreakers>
 </document>

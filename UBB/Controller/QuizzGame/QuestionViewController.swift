@@ -73,7 +73,7 @@ class QuestionViewController: UIViewController {
         // Do any additional setup after loading the view.
         answer.isHidden = true
         NextQuestion.isHidden = true
-        idQuestion.text = String(questionIndex)
+        idQuestion.text = "QUESTION" + String(questionIndex)
         currentQuestion = allQuestions.list[questionIndex]
         questionLabel.text = currentQuestion.title
         var i = 0

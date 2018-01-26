@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2A00CEFB61975DD5D73AD416 /* Pods_UBB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C622B93B4CD68675ED43065 /* Pods_UBB.framework */; };
+		80B1C5C7201B3FFA006CA2AD /* MavenPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B1C5C4201B3FF6006CA2AD /* MavenPro-Bold.ttf */; };
+		80B1C5C8201B3FFA006CA2AD /* MavenPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B1C5C4201B3FF6006CA2AD /* MavenPro-Bold.ttf */; };
+		80B1C5C9201B3FFA006CA2AD /* MavenPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B1C5C5201B3FF8006CA2AD /* MavenPro-Regular.ttf */; };
+		80B1C5CA201B3FFA006CA2AD /* MavenPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B1C5C5201B3FF8006CA2AD /* MavenPro-Regular.ttf */; };
+		80B1C5CB201B3FFA006CA2AD /* MavenPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B1C5C6201B3FF9006CA2AD /* MavenPro-Medium.ttf */; };
+		80B1C5CC201B3FFA006CA2AD /* MavenPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B1C5C6201B3FF9006CA2AD /* MavenPro-Medium.ttf */; };
 		D02B7CEA2017506300FB112A /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B7CE92017506300FB112A /* UserViewController.swift */; };
 		D040AFCD2015E81400F7684D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D040AFCC2015E81300F7684D /* WebKit.framework */; };
 		D04C2B861FB35580000C8813 /* Gesta Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C2B821FB35580000C8813 /* Gesta Italic.ttf */; };
@@ -59,6 +65,9 @@
 		55E20D3DC017696E8EBA8157 /* Pods-UBB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UBB/Pods-UBB.debug.xcconfig"; sourceTree = "<group>"; };
 		57689DDB8D58BAE22708F16C /* Pods-UBBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBBTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UBBTests/Pods-UBBTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79CF12256F87D1768F0EE8C0 /* Pods_UBBTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBBTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B1C5C4201B3FF6006CA2AD /* MavenPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Bold.ttf"; sourceTree = "<group>"; };
+		80B1C5C5201B3FF8006CA2AD /* MavenPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Regular.ttf"; sourceTree = "<group>"; };
+		80B1C5C6201B3FF9006CA2AD /* MavenPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Medium.ttf"; sourceTree = "<group>"; };
 		9C622B93B4CD68675ED43065 /* Pods_UBB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02B7CE92017506300FB112A /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D040AFCC2015E81300F7684D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -226,6 +235,9 @@
 				D04C2B841FB35580000C8813 /* Gesta Bold.ttf */,
 				D04C2B821FB35580000C8813 /* Gesta Italic.ttf */,
 				D04C2B831FB35580000C8813 /* Gesta Light.ttf */,
+				80B1C5C4201B3FF6006CA2AD /* MavenPro-Bold.ttf */,
+				80B1C5C6201B3FF9006CA2AD /* MavenPro-Medium.ttf */,
+				80B1C5C5201B3FF8006CA2AD /* MavenPro-Regular.ttf */,
 				D04C2B851FB35580000C8813 /* Gesta Regular.ttf */,
 				D0C6AE8B1FB33E7C0010C882 /* Assets.xcassets */,
 				D0C6AE821FB33E7C0010C882 /* AppDelegate.swift */,
@@ -373,10 +385,13 @@
 			files = (
 				F571596A201885350009CD38 /* scan.mp3 in Resources */,
 				F5A3E1F620162BF200577F6E /* valid.mp3 in Resources */,
+				80B1C5C7201B3FFA006CA2AD /* MavenPro-Bold.ttf in Resources */,
 				D0C6AE8F1FB33E7C0010C882 /* LaunchScreen.storyboard in Resources */,
+				80B1C5CB201B3FFA006CA2AD /* MavenPro-Medium.ttf in Resources */,
 				D0B1B09220163A7A0071C1A2 /* GoogleService-Info.plist in Resources */,
 				D0C6AE8C1FB33E7C0010C882 /* Assets.xcassets in Resources */,
 				D04C2B871FB35580000C8813 /* Gesta Light.ttf in Resources */,
+				80B1C5C9201B3FFA006CA2AD /* MavenPro-Regular.ttf in Resources */,
 				D04C2B881FB35580000C8813 /* Gesta Bold.ttf in Resources */,
 				D04C2B891FB35580000C8813 /* Gesta Regular.ttf in Resources */,
 				D04C2B861FB35580000C8813 /* Gesta Italic.ttf in Resources */,
@@ -388,6 +403,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B1C5C8201B3FFA006CA2AD /* MavenPro-Bold.ttf in Resources */,
+				80B1C5CA201B3FFA006CA2AD /* MavenPro-Regular.ttf in Resources */,
+				80B1C5CC201B3FFA006CA2AD /* MavenPro-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
