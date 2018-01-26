@@ -801,7 +801,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="cross"/>
                                         <connections>
-                                            <segue destination="gCG-jh-0Qu" kind="unwind" unwindAction="unwindToHomeScreenWithSegue:" id="jZe-PI-7vv"/>
+                                            <action selector="backBtnPressed:" destination="cST-PR-Abo" eventType="touchUpInside" id="oTi-0l-uYe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -855,7 +855,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eE5-D2-1m0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="gCG-jh-0Qu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="152.80000000000001" y="-1507.1964017991006"/>
         </scene>
@@ -1101,6 +1100,5 @@
         <image name="user" width="50" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7GU-6A-cpY"/>
     </inferredMetricsTieBreakers>
 </document>
