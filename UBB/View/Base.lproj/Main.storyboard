@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E9J-PZ-bIm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E9J-PZ-bIm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -681,7 +681,6 @@
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="stopGame:" destination="hiY-9O-MDc" eventType="touchUpInside" id="bjM-vt-lS7"/>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="0XH-eu-X4z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1103,6 +1102,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7GU-6A-cpY"/>
-        <segue reference="0XH-eu-X4z"/>
     </inferredMetricsTieBreakers>
 </document>

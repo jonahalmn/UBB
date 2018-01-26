@@ -37,6 +37,7 @@ class UnlockViewController: UIViewController {
 
     @IBAction func stopGame(_ sender: Any) {
         game.status = .over
+        dismiss(animated: true, completion: nil)
     }
     
     func hideX(){
@@ -78,9 +79,9 @@ class UnlockViewController: UIViewController {
                     self?.codeToSend = Int(rotation * (100 / -6))
                     if Modes.name == .classic{
                         self?.testInput() // Normal Mode
-                        if ((self?.game.currentTime)! > 90.0){
-                            self?.game.status = .over
-                        }
+//                        if ((self?.game.currentTime)! > 90.0){
+//                            self?.game.status = .over
+//                        }
                     }else{
                         self?.timeMode()
                     }
@@ -114,7 +115,7 @@ class UnlockViewController: UIViewController {
             }
             
         }else{
-	    self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fond.coffre.jpg")!)
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fond.coffre.jpg")!)
             timer.invalidate()
             game.status = .over
             self.gameHint.text = "BRAVO !"
