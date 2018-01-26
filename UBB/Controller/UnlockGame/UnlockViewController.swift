@@ -137,7 +137,14 @@ class UnlockViewController: UIViewController {
                                 self.gameProgression.text = "Gagné ! Votre token est : \(token)"
                             })
                         } else if let error = tokenJSON["error"].dictionaryObject {
-                            self.gameProgression.text = error["message"] as? String ?? "Erreur API"
+                            print(error["message"] as? String ?? "")
+                            switch (error["code"] as! Int) {
+                            case 4:
+                                self.gameProgression.text = "Vous avez déjà un token de ce jeu."
+                                break
+                            default:
+                                self.gameProgression.text = "Erreur API"
+                            }
                         }
                     } else {
                         print("Erreur: \(response.result.error!)")
