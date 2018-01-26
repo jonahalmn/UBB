@@ -27,7 +27,7 @@ class highscorePersister {
     }
     
     func isAnswered(_ id: Int) -> Bool {
-        for var ids in answered {
+        for ids in answered {
             if ids == id{
                 return true
             }

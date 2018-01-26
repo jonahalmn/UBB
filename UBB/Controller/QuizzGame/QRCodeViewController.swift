@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class QRCodeViewController: UIViewController {
 
@@ -22,11 +23,18 @@ class QRCodeViewController: UIViewController {
     }
     
 
-    
-    // MARK: - Navigation
-
-    @IBAction func unwindToHomeScreen(segue: UIStoryboardSegue) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func playBtnPressed(_ sender: UIButton) {
+        if let _ = FIRAuth.auth()?.currentUser {
+            let unlockVC = self.storyboard?.instantiateViewController(withIdentifier: "UnlockViewController")
+            self.present(unlockVC!, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Connexion requise", message: "Vous devez être connecté pour jouer à ce jeu.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Annuler", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Se connecter", style: .default, handler: { _ in
+                self.tabBarController?.selectedIndex = 3
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
 }

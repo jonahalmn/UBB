@@ -154,7 +154,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="hiY-9O-MDc" kind="show" id="nD9-ii-Udv"/>
+                                            <action selector="playBtnPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="PUx-Vm-bKO"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -540,7 +540,7 @@
         <!--Unlock View Controller-->
         <scene sceneID="Cm3-JG-bdI">
             <objects>
-                <viewController id="hiY-9O-MDc" customClass="UnlockViewController" customModule="UBB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UnlockViewController" id="hiY-9O-MDc" customClass="UnlockViewController" customModule="UBB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="center" id="m9e-O5-Gmg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -739,14 +739,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5K6-Yh-hfb">
-                                <rect key="frame" x="4" y="202" width="375" height="667"/>
+                                <rect key="frame" x="16" y="227" width="343" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.99215686270000003" green="0.81568627449999997" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Cliquez ici">
                                     <color key="titleColor" red="0.30980392156862746" green="0.086274509803921567" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cST-PR-Abo" kind="presentation" id="7GU-6A-cpY"/>
+                                    <action selector="playBtnPressed:" destination="KGt-Qr-KE4" eventType="touchUpInside" id="GuG-sA-pDT"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="palette" translatesAutoresizingMaskIntoConstraints="NO" id="PFJ-ne-20w">
@@ -754,7 +754,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Préparez-vous à scanner le QR-Code le plus proche de vous" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNS-RG-39U">
-                                <rect key="frame" x="41" y="329" width="300" height="157"/>
+                                <rect key="frame" x="41" y="62" width="300" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="29"/>
                                 <color key="textColor" red="0.30980392156862746" green="0.086274509803921567" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1099,7 +1099,4 @@
         <image name="trophy" width="50" height="48"/>
         <image name="user" width="50" height="48"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="7GU-6A-cpY"/>
-    </inferredMetricsTieBreakers>
 </document>
