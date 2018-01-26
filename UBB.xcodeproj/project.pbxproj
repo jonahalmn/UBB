@@ -14,7 +14,6 @@
 		D04C2B871FB35580000C8813 /* Gesta Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C2B831FB35580000C8813 /* Gesta Light.ttf */; };
 		D04C2B881FB35580000C8813 /* Gesta Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C2B841FB35580000C8813 /* Gesta Bold.ttf */; };
 		D04C2B891FB35580000C8813 /* Gesta Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C2B851FB35580000C8813 /* Gesta Regular.ttf */; };
-		D04C2B8B1FB35828000C8813 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04C2B8A1FB35828000C8813 /* NewsTableViewCell.swift */; };
 		D078FBD0201737DC003998EE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078FBCF201737DC003998EE /* ProfileViewController.swift */; };
 		D078FBD22017444E003998EE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078FBD12017444E003998EE /* RegisterViewController.swift */; };
 		D078FBD42017445B003998EE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078FBD32017445B003998EE /* LoginViewController.swift */; };
@@ -68,7 +67,6 @@
 		D04C2B831FB35580000C8813 /* Gesta Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gesta Light.ttf"; sourceTree = "<group>"; };
 		D04C2B841FB35580000C8813 /* Gesta Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gesta Bold.ttf"; sourceTree = "<group>"; };
 		D04C2B851FB35580000C8813 /* Gesta Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gesta Regular.ttf"; sourceTree = "<group>"; };
-		D04C2B8A1FB35828000C8813 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		D078FBCF201737DC003998EE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D078FBD12017444E003998EE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D078FBD32017445B003998EE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 			children = (
 				D0C6AE8D1FB33E7C0010C882 /* LaunchScreen.storyboard */,
 				D0C6AE881FB33E7C0010C882 /* Main.storyboard */,
-				D04C2B8A1FB35828000C8813 /* NewsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -520,7 +517,6 @@
 				F57159712018C3190009CD38 /* QRScannerController copy.swift in Sources */,
 				D078FBD42017445B003998EE /* LoginViewController.swift in Sources */,
 				D0C6AE871FB33E7C0010C882 /* SecondViewController.swift in Sources */,
-				D04C2B8B1FB35828000C8813 /* NewsTableViewCell.swift in Sources */,
 				F59FD5951FB5EE35000C67C2 /* SplashViewController.swift in Sources */,
 				D0C6AE831FB33E7C0010C882 /* AppDelegate.swift in Sources */,
 				D078FBD0201737DC003998EE /* ProfileViewController.swift in Sources */,
