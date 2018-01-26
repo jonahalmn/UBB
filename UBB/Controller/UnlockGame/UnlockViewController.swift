@@ -9,6 +9,9 @@
 import UIKit
 import CoreMotion
 import AudioToolbox
+import Alamofire
+import Firebase
+import SwiftyJSON
 
 class UnlockViewController: UIViewController {
     @IBOutlet weak var userInput: UILabel!
@@ -102,8 +105,35 @@ class UnlockViewController: UIViewController {
             
         }else{
             self.gameHint.text = "Partie terminée"
-            
-            self.gameProgression.text = "Vous participez au tirage au sort"
+            self.gameProgression.text = "Inscription en cours..."
+            if let userID = FIRAuth.auth()?.currentUser?.uid {
+                let params: Parameters = [
+                    "user_id": userID,
+                    "game_id": 1
+                ]
+                
+                Alamofire.request("https://api.sebastiengaya.fr", method: .post, parameters: params).responseJSON { (response) in
+                    if response.result.isSuccess {
+                        print("Réponse de l'API !")
+                        let tokenJSON: JSON = JSON(response.result.value!)
+                        if let token = tokenJSON["token"].string {
+                            let ref = FIRDatabase.database().reference()
+                            ref.child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
+                                let value = snapshot.value as? NSDictionary
+                                var currentTokens = value?["tokens"] as? [String] ?? []
+                                currentTokens.append(token)
+                                ref.child("users").child(userID).setValue(["tokens": currentTokens])
+                                self.gameProgression.text = "Gagné ! Votre token est : \(token)"
+                            })
+                        } else if let error = tokenJSON["error"].dictionaryObject {
+                            self.gameProgression.text = error["message"] as? String ?? "Erreur API"
+                        }
+                    } else {
+                        print("Erreur: \(response.result.error!)")
+                        self.gameProgression.text = "Problème de connexion"
+                    }
+                }
+            }
             
             persister.setHighscore(score: game.currentTime)
             setHighScoreLabel(persister.highscore)
