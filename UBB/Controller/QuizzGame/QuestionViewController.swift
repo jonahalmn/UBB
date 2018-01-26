@@ -11,7 +11,7 @@ import UIKit
 class QuestionViewController: UIViewController {
     
     var allQuestions = QuestionBank()
-    
+    var 
     var questionIndex: Int = 0
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var anwersButtons: [UIButton]!
