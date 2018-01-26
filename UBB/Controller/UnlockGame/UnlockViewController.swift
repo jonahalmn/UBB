@@ -28,6 +28,7 @@ class UnlockViewController: UIViewController {
     var persister = HighscorePersister()
     var manager = CMMotionManager()
     var codeToSend = 0
+    var timer = Timer()
 
     @IBAction func stopGame(_ sender: Any) {
         game.status = .over
@@ -57,7 +58,8 @@ class UnlockViewController: UIViewController {
         }
         // Do any additional setup after loading the view, typically from a nib.
         setHighScoreLabel(persister.highscore)
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector:#selector(refreshTime), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector:#selector(refreshTime), userInfo: nil, repeats: true)
+        
         
         if manager.isDeviceMotionAvailable {
             manager.deviceMotionUpdateInterval = 0.01
@@ -104,6 +106,7 @@ class UnlockViewController: UIViewController {
             }
             
         }else{
+            timer.invalidate()
             self.gameHint.text = "Partie terminée"
             self.gameProgression.text = "Inscription en cours..."
             if let userID = FIRAuth.auth()?.currentUser?.uid {
