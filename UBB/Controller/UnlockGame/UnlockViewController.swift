@@ -54,9 +54,6 @@ class UnlockViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "background")
-        self.view.insertSubview(backgroundImage, at: 0)
         if(Modes.name == .chrono){
             timeGame.startGame()
         }else{

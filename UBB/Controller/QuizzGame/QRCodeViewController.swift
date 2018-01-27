@@ -25,7 +25,7 @@ class QRCodeViewController: UIViewController {
 
     @IBAction func playBtnPressed(_ sender: UIButton) {
         if let _ = FIRAuth.auth()?.currentUser {
-            let unlockVC = self.storyboard?.instantiateViewController(withIdentifier: "UnlockViewController")
+            let unlockVC = self.storyboard?.instantiateViewController(withIdentifier: "QRScannerController")
             self.present(unlockVC!, animated: true, completion: nil)
         } else {
             let alert = UIAlertController(title: "Connexion requise", message: "Vous devez être connecté pour jouer à ce jeu.", preferredStyle: .alert)
