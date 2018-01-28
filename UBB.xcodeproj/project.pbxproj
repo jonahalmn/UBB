@@ -14,6 +14,8 @@
 		80B1C5CA201B3FFA006CA2AD /* MavenPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B1C5C5201B3FF8006CA2AD /* MavenPro-Regular.ttf */; };
 		80B1C5CB201B3FFA006CA2AD /* MavenPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B1C5C6201B3FF9006CA2AD /* MavenPro-Medium.ttf */; };
 		80B1C5CC201B3FFA006CA2AD /* MavenPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B1C5C6201B3FF9006CA2AD /* MavenPro-Medium.ttf */; };
+		D0120311201E519D0000FDBB /* Token.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0120310201E519D0000FDBB /* Token.xib */; };
+		D0120313201E51CE0000FDBB /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0120312201E51CE0000FDBB /* Token.swift */; };
 		D02B7CEA2017506300FB112A /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B7CE92017506300FB112A /* UserViewController.swift */; };
 		D040AFCD2015E81400F7684D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D040AFCC2015E81300F7684D /* WebKit.framework */; };
 		D04C2B861FB35580000C8813 /* Gesta Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C2B821FB35580000C8813 /* Gesta Italic.ttf */; };
@@ -70,6 +72,8 @@
 		80B1C5C5201B3FF8006CA2AD /* MavenPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Regular.ttf"; sourceTree = "<group>"; };
 		80B1C5C6201B3FF9006CA2AD /* MavenPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Medium.ttf"; sourceTree = "<group>"; };
 		9C622B93B4CD68675ED43065 /* Pods_UBB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0120310201E519D0000FDBB /* Token.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Token.xib; sourceTree = "<group>"; };
+		D0120312201E51CE0000FDBB /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		D02B7CE92017506300FB112A /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D040AFCC2015E81300F7684D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D04C2B821FB35580000C8813 /* Gesta Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gesta Italic.ttf"; sourceTree = "<group>"; };
@@ -143,6 +147,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D012030F201E51570000FDBB /* TokenView */ = {
+			isa = PBXGroup;
+			children = (
+				D0120310201E519D0000FDBB /* Token.xib */,
+				D0120312201E51CE0000FDBB /* Token.swift */,
+			);
+			path = TokenView;
+			sourceTree = "<group>";
+		};
 		D040AFCB2015E81200F7684D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +221,7 @@
 		D0C6AEA61FB340960010C882 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D012030F201E51570000FDBB /* TokenView */,
 				D0C6AE8D1FB33E7C0010C882 /* LaunchScreen.storyboard */,
 				D0C6AE881FB33E7C0010C882 /* Main.storyboard */,
 			);
@@ -389,6 +403,7 @@
 				F571596A201885350009CD38 /* scan.mp3 in Resources */,
 				F5A3E1F620162BF200577F6E /* valid.mp3 in Resources */,
 				80B1C5C7201B3FFA006CA2AD /* MavenPro-Bold.ttf in Resources */,
+				D0120311201E519D0000FDBB /* Token.xib in Resources */,
 				D0C6AE8F1FB33E7C0010C882 /* LaunchScreen.storyboard in Resources */,
 				80B1C5CB201B3FFA006CA2AD /* MavenPro-Medium.ttf in Resources */,
 				D0B1B09220163A7A0071C1A2 /* GoogleService-Info.plist in Resources */,
@@ -548,6 +563,7 @@
 				F5A41E6520161C9600237C87 /* Modes.swift in Sources */,
 				D0C6AE851FB33E7C0010C882 /* FirstViewController.swift in Sources */,
 				F571596B20188B080009CD38 /* Question.swift in Sources */,
+				D0120313201E51CE0000FDBB /* Token.swift in Sources */,
 				F571596C20188B080009CD38 /* QuestionBank.swift in Sources */,
 				F571596D20188B080009CD38 /* QRCodeViewController.swift in Sources */,
 				D02B7CEA2017506300FB112A /* UserViewController.swift in Sources */,
