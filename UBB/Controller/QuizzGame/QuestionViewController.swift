@@ -24,6 +24,16 @@ class QuestionViewController: UIViewController {
     
     var currentQuestion = Question(title: "title", answers: ["title"], correctAnswer: "title")
     
+    @IBAction func nextStep(_ sender: Any) {
+        if persister.isFinished(){
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "endViewController") as! EndViewController
+            self.present(nextViewController, animated:true, completion:nil)
+        }else{
+            dismiss(animated: true, completion: nil)
+        }
+    }
     
     
     
@@ -50,6 +60,7 @@ class QuestionViewController: UIViewController {
             answer.text = "bravo tu as trouvé"
             answer.isHidden = false
             NextQuestion.isHidden = false
+            persister.correctAnswer()
             for button in anwersButtons{
                 button.isHidden = true
             }

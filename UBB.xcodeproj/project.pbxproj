@@ -35,6 +35,7 @@
 		D0C6AE9A1FB33E7C0010C882 /* UBBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE991FB33E7C0010C882 /* UBBTests.swift */; };
 		D0EE622E201F2F59009096EF /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EE622D201F2F59009096EF /* EditUserViewController.swift */; };
 		D0F497E4201A8D0E00C8F60C /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */; };
+		F524922D201F257D000D67F1 /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524922C201F257D000D67F1 /* EndViewController.swift */; };
 		F56A54A8201B43C600B67FD1 /* highscorePersister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A54A7201B43C600B67FD1 /* highscorePersister.swift */; };
 		F571596A201885350009CD38 /* scan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C42698201881EB009A2CCD /* scan.mp3 */; };
 		F571596B20188B080009CD38 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C4269C201882E4009A2CCD /* Question.swift */; };
@@ -98,6 +99,7 @@
 		D0C6AE9B1FB33E7C0010C882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0EE622D201F2F59009096EF /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
 		D3E917C6A8AADB64AA92093C /* Pods-UBBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBBTests/Pods-UBBTests.release.xcconfig"; sourceTree = "<group>"; };
+		F524922C201F257D000D67F1 /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		F56A54A7201B43C600B67FD1 /* highscorePersister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = highscorePersister.swift; sourceTree = "<group>"; };
 		F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		F5A3E1F52016291600577F6E /* valid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = valid.mp3; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				F5C426992018825B009A2CCD /* QRCodeViewController.swift */,
+				F524922C201F257D000D67F1 /* EndViewController.swift */,
 				F5C4269B2018825B009A2CCD /* QRScannerController.swift */,
 				F5C4269A2018825B009A2CCD /* QuestionViewController.swift */,
 			);
@@ -547,6 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F524922D201F257D000D67F1 /* EndViewController.swift in Sources */,
 				F56A54A8201B43C600B67FD1 /* highscorePersister.swift in Sources */,
 				D0F497E4201A8D0E00C8F60C /* UnlockViewController.swift in Sources */,
 				F57159722018C3FC0009CD38 /* QRScannerController.swift in Sources */,

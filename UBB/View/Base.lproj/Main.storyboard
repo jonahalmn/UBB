@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E9J-PZ-bIm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E9J-PZ-bIm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -627,11 +627,13 @@
                                     <constraint firstAttribute="height" constant="10" id="tNx-1h-bcD"/>
                                 </constraints>
                             </view>
+
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFIL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAh-xO-hpl" userLabel="Profil">
                                 <rect key="frame" x="0.0" y="88" width="375" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="WDG-kD-6Me"/>
                                 </constraints>
+
                                 <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1198,6 +1200,14 @@
                                             <action selector="backBtnPressed:" destination="VMM-ow-gYZ" eventType="touchUpInside" id="3TU-Bd-e7Q"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7Z-ze-pBn">
+                                        <rect key="frame" x="298" y="12" width="58" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Mise a 0"/>
+                                        <connections>
+                                            <action selector="resetPersister:" destination="VMM-ow-gYZ" eventType="touchUpInside" id="Q2R-P0-EAR"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.30980392156862746" green="0.086274509803921567" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1345,7 +1355,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="VMM-ow-gYZ" kind="show" id="ilg-4l-NuD"/>
+                                            <action selector="nextStep:" destination="6u1-o7-MxA" eventType="touchUpInside" id="MK7-he-T6N"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1380,10 +1390,10 @@
             </objects>
             <point key="canvasLocation" x="1032.8" y="-1507.1964017991006"/>
         </scene>
-        <!--WinQuizzViewController-->
+        <!--endViewController-->
         <scene sceneID="OCI-co-mvU">
             <objects>
-                <viewController storyboardIdentifier="WinQuizzViewController" title="WinQuizzViewController" id="6ZH-qL-NGF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="endViewController" title="endViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6ZH-qL-NGF" customClass="EndViewController" customModule="UBB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wnW-vN-fVB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1429,6 +1439,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="VWY-Fr-vds"/>
                     </view>
+                    <connections>
+                        <outlet property="instructionLabel" destination="bsB-ye-cBM" id="0rT-t0-dqX"/>
+                        <outlet property="resultLabel" destination="eRw-3s-MwE" id="Qnx-I2-fTH"/>
+                        <outlet property="scoreLabel" destination="mR2-yD-j4r" id="d5H-wG-ybb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSw-NY-1Dl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -23,6 +23,10 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func resetPersister(_ sender: Any) {
+        persister.resetQuestion()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -92,7 +96,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        captureSession.stopRunning()
+        //captureSession.stopRunning()
         
         if let metadataObject = metadataObjects.first {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
@@ -108,9 +112,20 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         print(code)
         if Int(code) != nil{
             if Int(code)! < allQuestions.list.count {
-                let currentQuestion = allQuestions.list[Int(code)!]
-                
-                print(currentQuestion.title)
+                if persister.isAnswered(Int(code)!) == false{
+                    let currentQuestion = allQuestions.list[Int(code)!]
+                    
+                    print(currentQuestion.title)
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "questionViewController") as! QuestionViewController
+                    nextViewController.questionIndex = Int(code)!
+                    self.present(nextViewController, animated:true, completion:nil)
+                }else{
+                    let alert = UIAlertController(title: "Erreur", message: "Vous avez déja répondu à cette question", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .`default`, handler:{ _ in print("fghjkl")}))
+                    self.present(alert, animated: true, completion: nil)
+                }
             }else{
                 let alert = UIAlertController(title: "Erreur", message: "Ce QR code est faux", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .`default`, handler:{ _ in print("fghjkl")}))
@@ -129,11 +144,6 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         //                if position == 0{
         //
         //
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "questionViewController") as! QuestionViewController
-        nextViewController.questionIndex = Int(code)!
-        self.present(nextViewController, animated:true, completion:nil)
         
     }
     
