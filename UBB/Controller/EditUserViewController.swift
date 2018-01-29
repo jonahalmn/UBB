@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class EditUserViewController: UIViewController {
+class EditUserViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextfield: UITextField!
     @IBOutlet weak var firstnameTextfield: UITextField!
@@ -19,6 +19,12 @@ class EditUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameTextfield.delegate = self
+        firstnameTextfield.delegate = self
+        emailTextfield.delegate = self
+        phoneTextField.delegate = self
+        
         let userID = FIRAuth.auth()?.currentUser?.uid
         let userEmail = FIRAuth.auth()?.currentUser?.email!
         FIRDatabase.database().reference().child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
@@ -41,7 +47,23 @@ class EditUserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func validateBtnPressed(_ sender: UIButton) {
+    // MARK: UITextFieldDelegate Methods
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+            validateBtnPressed(self)
+        }
+        // Do not add a line break
+        return false
+    }
+    
+    @IBAction func validateBtnPressed(_ sender: AnyObject) {
         SVProgressHUD.show()
         let userID = FIRAuth.auth()?.currentUser?.uid
         
