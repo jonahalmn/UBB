@@ -19,7 +19,15 @@ class EndViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scoreLabel.text = "Votre Score" + String(persister.score)
+        scoreLabel.text = "Votre Score: " + String(persister.score)
+        
+        if persister.score == 3 {
+            resultLabel.text = "Bravo vous avez gagné"
+            instructionLabel.text = "Votre ticket est sur votre espace perso"
+        }else{
+            resultLabel.text = "Quel échec"
+            instructionLabel.text = "Retentez votre chance"
+        }
         // Do any additional setup after loading the view.
     }
 
