@@ -9,6 +9,20 @@
 import UIKit
 import Firebase
 
+extension String {
+    subscript (bounds: CountableClosedRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return String(self[start...end])
+    }
+    
+    subscript (bounds: CountableRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: bounds.lowerBound)
+        let end = index(startIndex, offsetBy: bounds.upperBound)
+        return String(self[start..<end])
+    }
+}
+
 class UserViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var connectedAsLabel: UILabel!
@@ -24,10 +38,7 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
             connectedAsLabel.text = "Connecté en tant que : \(currentUserEmail)"
         }
         
-        let tokens: [Token] = createTokens()
-        setupTokenScrollView(tokens: tokens)
-        pageControl.numberOfPages = tokens.count
-        pageControl.currentPage = 0
+        setupTokenScrollView()
 
         // Do any additional setup after loading the view.
     }
@@ -65,27 +76,54 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = Int(pageIndex)
     }
     
-    func createTokens() -> [Token] {
-        let firstToken = Bundle.main.loadNibNamed("Token", owner: self, options: nil)?.first as! Token
-        firstToken.tokenLabel.text = "123 456 7890"
-        
-        let secondToken = Bundle.main.loadNibNamed("Token", owner: self, options: nil)?.first as! Token
-        secondToken.tokenLabel.text = "098 765 4321"
-        
-        return [firstToken, secondToken]
-    }
-    
-    func setupTokenScrollView(tokens: [Token]) {
-        tokenScrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 78)
-        tokenScrollView.contentSize = CGSize(width: view.frame.width * CGFloat(tokens.count), height: 78)
-        tokenScrollView.isPagingEnabled = true
-        
-        for i in 0..<tokens.count {
-            tokens[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: 78)
-            tokens[i].boxView.layer.cornerRadius = 10
-            tokenScrollView.addSubview(tokens[i])
-            print(tokens[i].tokenLabel.text!)
+    func setupTokenScrollView() {
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        print(userID!)
+        FIRDatabase.database().reference().child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let stringTokens = value?["tokens"] as? [String] ?? []
             
+            for subview in self.tokenScrollView.subviews {
+                subview.removeFromSuperview()
+            }
+            
+            if !stringTokens.isEmpty {
+                print("not empty")
+                var tokens = [Token]()
+                for i in 0..<stringTokens.count {
+                    let token = Bundle.main.loadNibNamed("Token", owner: self, options: nil)?.first as! Token
+                    token.tokenLabel.text = "\(String(stringTokens[i][0...2])) \(String(stringTokens[i][3...5])) \(String(stringTokens[i][6...9]))"
+                    tokens.append(token)
+                }
+                
+                self.tokenScrollView.frame = CGRect(x: 0, y: 78, width: self.view.frame.width, height: 78)
+                self.tokenScrollView.contentSize = CGSize(width: self.view.frame.width * CGFloat(tokens.count), height: 78)
+                self.tokenScrollView.isPagingEnabled = true
+                
+                for i in 0..<tokens.count {
+                    tokens[i].frame = CGRect(x: self.view.frame.width * CGFloat(i), y: 0, width: self.view.frame.width, height: 78)
+                    tokens[i].boxView.layer.cornerRadius = 10
+                    self.tokenScrollView.addSubview(tokens[i])
+                    print(tokens[i].tokenLabel.text!)
+                    
+                }
+                self.pageControl.numberOfPages = tokens.count
+                self.pageControl.currentPage = 0
+            } else {
+                print("empty")
+                self.tokenScrollView.frame = CGRect(x: 0, y: 78, width: self.view.frame.width, height: 78)
+                self.tokenScrollView.contentSize = CGSize(width: self.view.frame.width, height: 78)
+                self.tokenScrollView.isPagingEnabled = true
+                self.tokenScrollView.isScrollEnabled = true
+                
+                let token = Bundle.main.loadNibNamed("Token", owner: self, options: nil)?.first as! Token
+                token.tokenLabel.text = "Pas de token"
+                token.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 78)
+                token.boxView.layer.cornerRadius = 10
+                self.tokenScrollView.addSubview(token)
+                self.pageControl.numberOfPages = 1
+                self.pageControl.currentPage = 0
+            }
         }
     }
 
