@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Gesta Bold.ttf">
-            <string>GestaW01-Bold</string>
+        <array key="MavenPro-Bold.ttf">
+            <string>MavenPro-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -28,7 +28,7 @@
                             <rect key="frame" x="16" y="12" width="174.5" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" name="GestaW01-Bold" family="GestaW01-Bold" pointSize="28"/>
+                            <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="23"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>

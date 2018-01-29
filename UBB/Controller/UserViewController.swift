@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 extension String {
     subscript (bounds: CountableClosedRange<Int>) -> String {
@@ -25,21 +26,21 @@ extension String {
 
 class UserViewController: UIViewController, UIScrollViewDelegate {
 
-    @IBOutlet weak var connectedAsLabel: UILabel!
     @IBOutlet weak var tokenScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var tokenActivityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var firstnameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tokenScrollView.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(refresh(_:)), name: Notification.Name("userdataChanged"), object: nil)
         
-        if let currentUserEmail = FIRAuth.auth()?.currentUser?.email {
-            connectedAsLabel.text = "Connecté en tant que : \(currentUserEmail)"
-        }
-        
-        setupTokenScrollView()
+        refresh(self)
 
         // Do any additional setup after loading the view.
     }
@@ -75,6 +76,25 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageIndex = round(scrollView.contentOffset.x / view.frame.width)
         pageControl.currentPage = Int(pageIndex)
+    }
+    
+    func setupUserdataView() {
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        let userEmail = FIRAuth.auth()?.currentUser?.email
+        FIRDatabase.database().reference().child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var userdata = [String: String]()
+            
+            userdata["name"] = value?["name"] as? String ?? "[non défini]"
+            userdata["firstname"] = value?["firstname"] as? String ?? "[non défini]"
+            userdata["email"] = userEmail!
+            userdata["phone"] = value?["phone"] as? String ?? "[non défini]"
+            
+            self.nameLabel.text = userdata["name"]
+            self.firstnameLabel.text = userdata["firstname"]
+            self.emailLabel.text = userdata["email"]
+            self.phoneLabel.text = userdata["phone"]
+        }
     }
     
     func setupTokenScrollView() {
@@ -150,9 +170,12 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
             self.tokenScrollView.isHidden = false
             self.pageControl.isHidden = false
         }
+        SVProgressHUD.dismiss()
     }
     
     @IBAction func refresh(_ sender: Any) {
+        SVProgressHUD.show()
+        setupUserdataView()
         setupTokenScrollView()
     }
     

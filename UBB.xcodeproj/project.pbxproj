@@ -33,6 +33,7 @@
 		D0C6AE8C1FB33E7C0010C882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C6AE8B1FB33E7C0010C882 /* Assets.xcassets */; };
 		D0C6AE8F1FB33E7C0010C882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C6AE8D1FB33E7C0010C882 /* LaunchScreen.storyboard */; };
 		D0C6AE9A1FB33E7C0010C882 /* UBBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE991FB33E7C0010C882 /* UBBTests.swift */; };
+		D0EE622E201F2F59009096EF /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EE622D201F2F59009096EF /* EditUserViewController.swift */; };
 		D0F497E4201A8D0E00C8F60C /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */; };
 		F56A54A8201B43C600B67FD1 /* highscorePersister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56A54A7201B43C600B67FD1 /* highscorePersister.swift */; };
 		F571596A201885350009CD38 /* scan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C42698201881EB009A2CCD /* scan.mp3 */; };
@@ -95,6 +96,7 @@
 		D0C6AE951FB33E7C0010C882 /* UBBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UBBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C6AE991FB33E7C0010C882 /* UBBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBBTests.swift; sourceTree = "<group>"; };
 		D0C6AE9B1FB33E7C0010C882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0EE622D201F2F59009096EF /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
 		D3E917C6A8AADB64AA92093C /* Pods-UBBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBBTests/Pods-UBBTests.release.xcconfig"; sourceTree = "<group>"; };
 		F56A54A7201B43C600B67FD1 /* highscorePersister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = highscorePersister.swift; sourceTree = "<group>"; };
 		F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		D0C6AEA71FB3409D0010C882 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0EE622D201F2F59009096EF /* EditUserViewController.swift */,
 				D0C6AE841FB33E7C0010C882 /* FirstViewController.swift */,
 				D0C6AE861FB33E7C0010C882 /* SecondViewController.swift */,
 				F59FD5941FB5EE35000C67C2 /* SplashViewController.swift */,
@@ -547,6 +550,7 @@
 				F56A54A8201B43C600B67FD1 /* highscorePersister.swift in Sources */,
 				D0F497E4201A8D0E00C8F60C /* UnlockViewController.swift in Sources */,
 				F57159722018C3FC0009CD38 /* QRScannerController.swift in Sources */,
+				D0EE622E201F2F59009096EF /* EditUserViewController.swift in Sources */,
 				F571596F20188B080009CD38 /* QuestionViewController.swift in Sources */,
 				D078FBD42017445B003998EE /* LoginViewController.swift in Sources */,
 				D0C6AE871FB33E7C0010C882 /* SecondViewController.swift in Sources */,
