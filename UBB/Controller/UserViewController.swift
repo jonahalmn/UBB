@@ -28,6 +28,7 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var connectedAsLabel: UILabel!
     @IBOutlet weak var tokenScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var tokenActivityIndicator: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
@@ -51,7 +52,7 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func disconnectPressed(_ sender: UIButton) {
         do {
             try FIRAuth.auth()?.signOut()
-            print("Login Successful!")
+            print("Logout Successful!")
             let anonymousVC = self.storyboard?.instantiateViewController(withIdentifier: "AnonymousViewController")
             self.navigationController?.viewControllers = [anonymousVC!]
         } catch let signOutError as NSError {
@@ -77,9 +78,13 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setupTokenScrollView() {
+        tokenActivityIndicator.startAnimating()
+        tokenScrollView.isHidden = true
+        pageControl.isHidden = true
+        
         let userID = FIRAuth.auth()?.currentUser?.uid
-        print(userID!)
-        FIRDatabase.database().reference().child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
+        //print(userID!)
+        FIRDatabase.database().reference().child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let stringTokens = value?["tokens"] as? [String] ?? []
             
@@ -124,7 +129,32 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
                 self.pageControl.numberOfPages = 1
                 self.pageControl.currentPage = 0
             }
+            self.tokenActivityIndicator.stopAnimating()
+            self.tokenScrollView.isHidden = false
+            self.pageControl.isHidden = false
+        }) { (error) in
+            print("Error: \(error)")
+            self.tokenScrollView.frame = CGRect(x: 0, y: 78, width: self.view.frame.width, height: 78)
+            self.tokenScrollView.contentSize = CGSize(width: self.view.frame.width, height: 78)
+            self.tokenScrollView.isPagingEnabled = true
+            self.tokenScrollView.isScrollEnabled = true
+            
+            let token = Bundle.main.loadNibNamed("Token", owner: self, options: nil)?.first as! Token
+            token.tokenLabel.text = "Erreur réseau"
+            token.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 78)
+            token.boxView.layer.cornerRadius = 10
+            self.tokenScrollView.addSubview(token)
+            self.pageControl.numberOfPages = 1
+            self.pageControl.currentPage = 0
+            self.tokenActivityIndicator.stopAnimating()
+            self.tokenScrollView.isHidden = false
+            self.pageControl.isHidden = false
         }
     }
+    
+    @IBAction func refresh(_ sender: Any) {
+        setupTokenScrollView()
+    }
+    
 
 }

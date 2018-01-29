@@ -30,11 +30,11 @@ class RegisterViewController: UIViewController {
         SVProgressHUD.show()
         //TODO: Set up a new user on our Firbase database
         FIRAuth.auth()?.createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
+            SVProgressHUD.dismiss()
             if error != nil {
                 print(error!)
             } else {
                 print("Registration Successful!")
-                SVProgressHUD.dismiss()
                 let userVC = self.storyboard?.instantiateViewController(withIdentifier: "UserViewController")
                 self.navigationController?.viewControllers = [userVC!]
             }
