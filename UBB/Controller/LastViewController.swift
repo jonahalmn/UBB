@@ -34,6 +34,12 @@ class LastViewController: UIViewController {
         }
     }
     
+    @IBAction func shopBtnPressed(_ sender: UIButton) {
+        if let url = URL(string: "http://shop.ubbrugby.com") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
