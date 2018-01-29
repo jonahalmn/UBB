@@ -33,6 +33,7 @@
 		D0C6AE8C1FB33E7C0010C882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C6AE8B1FB33E7C0010C882 /* Assets.xcassets */; };
 		D0C6AE8F1FB33E7C0010C882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C6AE8D1FB33E7C0010C882 /* LaunchScreen.storyboard */; };
 		D0C6AE9A1FB33E7C0010C882 /* UBBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE991FB33E7C0010C882 /* UBBTests.swift */; };
+		D0E4CB5D201F63D6006C4D40 /* LastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E4CB5C201F63D6006C4D40 /* LastViewController.swift */; };
 		D0EE622E201F2F59009096EF /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EE622D201F2F59009096EF /* EditUserViewController.swift */; };
 		D0F497E4201A8D0E00C8F60C /* UnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A41E5A20161C4E00237C87 /* UnlockViewController.swift */; };
 		F524922D201F257D000D67F1 /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524922C201F257D000D67F1 /* EndViewController.swift */; };
@@ -97,6 +98,7 @@
 		D0C6AE951FB33E7C0010C882 /* UBBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UBBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C6AE991FB33E7C0010C882 /* UBBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBBTests.swift; sourceTree = "<group>"; };
 		D0C6AE9B1FB33E7C0010C882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E4CB5C201F63D6006C4D40 /* LastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
 		D0EE622D201F2F59009096EF /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
 		D3E917C6A8AADB64AA92093C /* Pods-UBBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBBTests/Pods-UBBTests.release.xcconfig"; sourceTree = "<group>"; };
 		F524922C201F257D000D67F1 /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				D078FBD12017444E003998EE /* RegisterViewController.swift */,
 				D078FBD32017445B003998EE /* LoginViewController.swift */,
 				D02B7CE92017506300FB112A /* UserViewController.swift */,
+				D0E4CB5C201F63D6006C4D40 /* LastViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				D0120313201E51CE0000FDBB /* Token.swift in Sources */,
 				F571596C20188B080009CD38 /* QuestionBank.swift in Sources */,
 				F571596D20188B080009CD38 /* QRCodeViewController.swift in Sources */,
+				D0E4CB5D201F63D6006C4D40 /* LastViewController.swift in Sources */,
 				D02B7CEA2017506300FB112A /* UserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
