@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class LastViewController: UIViewController {
 
@@ -22,7 +23,9 @@ class LastViewController: UIViewController {
     }
     
     @IBAction func ticketingBtnPressed(_ sender: UIButton) {
-        print("ticketing")
+        let safariVC = SFSafariViewController(url: URL(string: "http://billetterie.ubbrugby.com")!)
+        safariVC.modalPresentationStyle = .popover
+        self.present(safariVC, animated: true, completion: nil)
     }
     
     @IBAction func websiteBtnPressed(_ sender: UIButton) {
