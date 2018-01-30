@@ -25,6 +25,7 @@
 		D078FBD0201737DC003998EE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078FBCF201737DC003998EE /* ProfileViewController.swift */; };
 		D078FBD22017444E003998EE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078FBD12017444E003998EE /* RegisterViewController.swift */; };
 		D078FBD42017445B003998EE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078FBD32017445B003998EE /* LoginViewController.swift */; };
+		D0A3EB7B202050F800F6DFF9 /* AnonymousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A3EB7A202050F800F6DFF9 /* AnonymousViewController.swift */; };
 		D0B1B09220163A7A0071C1A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0A3BE8620163870000A5601 /* GoogleService-Info.plist */; };
 		D0C6AE831FB33E7C0010C882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE821FB33E7C0010C882 /* AppDelegate.swift */; };
 		D0C6AE851FB33E7C0010C882 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6AE841FB33E7C0010C882 /* FirstViewController.swift */; };
@@ -87,6 +88,7 @@
 		D078FBD12017444E003998EE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D078FBD32017445B003998EE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D0A3BE8620163870000A5601 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D0A3EB7A202050F800F6DFF9 /* AnonymousViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousViewController.swift; sourceTree = "<group>"; };
 		D0C6AE7F1FB33E7C0010C882 /* UBB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C6AE821FB33E7C0010C882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C6AE841FB33E7C0010C882 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				D078FBD32017445B003998EE /* LoginViewController.swift */,
 				D02B7CE92017506300FB112A /* UserViewController.swift */,
 				D0E4CB5C201F63D6006C4D40 /* LastViewController.swift */,
+				D0A3EB7A202050F800F6DFF9 /* AnonymousViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				D0EE622E201F2F59009096EF /* EditUserViewController.swift in Sources */,
 				F571596F20188B080009CD38 /* QuestionViewController.swift in Sources */,
 				D078FBD42017445B003998EE /* LoginViewController.swift in Sources */,
+				D0A3EB7B202050F800F6DFF9 /* AnonymousViewController.swift in Sources */,
 				D0C6AE871FB33E7C0010C882 /* SecondViewController.swift in Sources */,
 				F59FD5951FB5EE35000C67C2 /* SplashViewController.swift in Sources */,
 				D0C6AE831FB33E7C0010C882 /* AppDelegate.swift in Sources */,
