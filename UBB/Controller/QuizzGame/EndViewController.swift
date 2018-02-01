@@ -13,6 +13,7 @@ class EndViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     var persister = highscorePersister()
     
@@ -22,11 +23,13 @@ class EndViewController: UIViewController {
         scoreLabel.text = "Votre Score: " + String(persister.score)
         
         if persister.score == 3 {
-            resultLabel.text = "Bravo vous avez gagné"
+            resultLabel.text = "Bravo, vous avez gagné !"
             instructionLabel.text = "Votre ticket est sur votre espace perso"
+            imageView.image = UIImage(named: "UBBFCG_AVEI_CAZEAUX_LESGOURGUES_CONNOR")
         }else{
-            resultLabel.text = "Quel échec"
+            resultLabel.text = "Vous avez perdu..."
             instructionLabel.text = "Retentez votre chance"
+            imageView.image = UIImage(named: "UBBST_BRAID")
         }
         // Do any additional setup after loading the view.
     }

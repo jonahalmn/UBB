@@ -110,9 +110,9 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     
     func found(code: String) {
         print(code)
-        if Int(code) != nil{
-            if Int(code)! < allQuestions.list.count {
-                if persister.isAnswered(Int(code)!) == false{
+        if let codeInt = Int(code) {
+            if codeInt < allQuestions.list.count {
+                if persister.isAnswered(codeInt) == false{
                     let currentQuestion = allQuestions.list[Int(code)!]
                     
                     print(currentQuestion.title)
@@ -123,17 +123,17 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                     self.present(nextViewController, animated:true, completion:nil)
                 }else{
                     let alert = UIAlertController(title: "Erreur", message: "Vous avez déja répondu à cette question", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: .`default`, handler:{ _ in print("fghjkl")}))
+                    alert.addAction(UIAlertAction(title: "Ok", style: .`default`, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 }
             }else{
                 let alert = UIAlertController(title: "Erreur", message: "Ce QR code est faux", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .`default`, handler:{ _ in print("fghjkl")}))
+                alert.addAction(UIAlertAction(title: "Ok", style: .`default`, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 
             }}else{
             let alert = UIAlertController(title: "Erreur", message: "Ce QR code est faux", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .`default`, handler:{ _ in print("fghjkl")}))
+            alert.addAction(UIAlertAction(title: "Ok", style: .`default`, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         

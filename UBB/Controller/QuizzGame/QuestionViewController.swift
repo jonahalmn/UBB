@@ -57,7 +57,7 @@ class QuestionViewController: UIViewController {
 //        }
         
         if String((sender.titleLabel?.text)!) == currentQuestion.correctAnswer {
-            answer.text = "bravo tu as trouvé"
+            answer.text = "Bonne réponse !"
             answer.isHidden = false
             NextQuestion.isHidden = false
             persister.correctAnswer()
@@ -65,7 +65,7 @@ class QuestionViewController: UIViewController {
                 button.isHidden = true
             }
         }else{
-            answer.text = "quel dommage"
+            answer.text = "Mauvaise réponse..."
             NextQuestion.isHidden = false
             answer.isHidden = false
             for button in anwersButtons{
@@ -84,7 +84,7 @@ class QuestionViewController: UIViewController {
         // Do any additional setup after loading the view.
         answer.isHidden = true
         NextQuestion.isHidden = true
-        idQuestion.text = "QUESTION" + String(questionIndex)
+        idQuestion.text = "QUESTION " + String(questionIndex)
         currentQuestion = allQuestions.list[questionIndex]
         questionLabel.text = currentQuestion.title
         var i = 0

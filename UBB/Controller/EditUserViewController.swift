@@ -14,7 +14,6 @@ class EditUserViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextfield: UITextField!
     @IBOutlet weak var firstnameTextfield: UITextField!
-    @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     
     override func viewDidLoad() {
@@ -22,11 +21,9 @@ class EditUserViewController: UIViewController, UITextFieldDelegate {
         
         nameTextfield.delegate = self
         firstnameTextfield.delegate = self
-        emailTextfield.delegate = self
         phoneTextField.delegate = self
         
         let userID = FIRAuth.auth()?.currentUser?.uid
-        let userEmail = FIRAuth.auth()?.currentUser?.email!
         FIRDatabase.database().reference().child("users").child(userID!).observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
             let name = value?["name"] as? String ?? ""
@@ -35,7 +32,6 @@ class EditUserViewController: UIViewController, UITextFieldDelegate {
             
             self.nameTextfield.text = name
             self.firstnameTextfield.text = firstname
-            self.emailTextfield.text = userEmail
             self.phoneTextField.text = phone
         }
         
@@ -69,21 +65,15 @@ class EditUserViewController: UIViewController, UITextFieldDelegate {
         
         let name = nameTextfield.text!
         let firstname = firstnameTextfield.text!
-        let email = emailTextfield.text!
         let phone = phoneTextField.text!
-        
-        if (FIRAuth.auth()?.currentUser?.email! != email) {
-            FIRAuth.auth()?.currentUser?.updateEmail(email, completion: nil)
-        }
         
         FIRDatabase.database().reference().child("users/\(userID!)/name").setValue(name)
         FIRDatabase.database().reference().child("users/\(userID!)/firstname").setValue(firstname)
         FIRDatabase.database().reference().child("users/\(userID!)/phone").setValue(phone)
         
         SVProgressHUD.dismiss()
-        dismiss(animated: true) {
-            NotificationCenter.default.post(Notification.init(name: Notification.Name("userdataChanged")))
-        }
+        NotificationCenter.default.post(Notification.init(name: Notification.Name("userdataChanged")))
+        self.navigationController?.popViewController(animated: true)
     }
     
     /*

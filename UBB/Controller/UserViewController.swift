@@ -123,6 +123,7 @@ class UserViewController: UIViewController, UIScrollViewDelegate {
         let userID = FIRAuth.auth()?.currentUser?.uid
         //print(userID!)
         FIRDatabase.database().reference().child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            print("snapshot")
             let value = snapshot.value as? NSDictionary
             let stringTokens = value?["tokens"] as? [String] ?? []
             
