@@ -135,7 +135,7 @@ class UnlockViewController: UIViewController {
                                 let value = snapshot.value as? NSDictionary
                                 var currentTokens = value?["tokens"] as? [String] ?? []
                                 currentTokens.append(token)
-                                ref.child("users").child(userID).setValue(["tokens": currentTokens])
+                                ref.child("users/\(userID)/tokens").setValue(currentTokens)
                                 self.gameProgression.text = "Gagné ! Votre token est : \(token)"
                             })
                         } else if let error = tokenJSON["error"].dictionaryObject {
