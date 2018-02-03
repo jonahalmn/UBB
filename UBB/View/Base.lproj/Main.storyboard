@@ -121,50 +121,80 @@
             </objects>
             <point key="canvasLocation" x="-1860" y="-1133.433283358321"/>
         </scene>
-        <!--Second View Controller-->
-        <scene sceneID="wg7-f3-ORb">
+        <!--SecondViewController-->
+        <scene sceneID="v3X-Mc-1W5">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="UBB" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                <viewController storyboardIdentifier="SecondViewController" title="SecondViewController" id="o0N-Er-ye2" customClass="SecondViewController" customModule="UBB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e3b-eT-nTh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bwu-xe-H83">
-                                <rect key="frame" x="-20" y="256" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jeu" translatesAutoresizingMaskIntoConstraints="NO" id="K8R-JW-QTS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homepic2" translatesAutoresizingMaskIntoConstraints="NO" id="Dvh-yw-8n7">
+                                <rect key="frame" x="139" y="-54" width="263" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jo9-hH-0rs">
-                                <rect key="frame" x="97" y="502" width="180" height="54"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="safebox1" translatesAutoresizingMaskIntoConstraints="NO" id="bYj-2g-VBr">
+                                <rect key="frame" x="-55" y="308" width="501" height="572"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgj-hk-9KW">
-                                        <rect key="frame" x="0.0" y="-1" width="180" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="JOUER">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="playBtnPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="PUx-Vm-bKO"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.4083612859249115" green="0.1127556785941124" blue="0.19798010587692261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LE JEU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XK5-NY-yhT">
+                                <rect key="frame" x="67" y="54" width="64" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Medium" family="Maven Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RÈGLEMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMT-4m-TiC">
+                                <rect key="frame" x="16" y="160" width="116" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Medium" family="Maven Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNb-qf-Kfa">
+                                <rect key="frame" x="16" y="192" width="343" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Tentez de trouver la combinaison qui déverrouille le coffre-fort le plus vite possible. Pour cela, faites tourner votre téléphone jusqu'à ressentir trois vibrations.</string>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8P-Cd-QvI">
+                                <rect key="frame" x="16" y="268" width="343" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Les participants les plus rapides s'inscrivent au tirage au sort du prochain match dans l'un de nos stades bordelais. De nombreux lots sont à gagner !</string>
+                                <fontDescription key="fontDescription" name="MavenPro-Regular" family="Maven Pro" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COFFRE-FORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPW-4S-WQ0">
+                                <rect key="frame" x="67" y="82" width="206" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MavenPro-Bold" family="Maven Pro" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWv-QZ-24f">
+                                <rect key="frame" x="97" y="499" width="180" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.1137254902" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="JOUER">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playBtnPressed:" destination="o0N-Er-ye2" eventType="touchUpInside" id="6Ov-Z5-kzC"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="UFm-eQ-uN4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="trophy" id="cPa-gy-q4n">
+                    <tabBarItem key="tabBarItem" title="" image="trophy" id="was-wE-9PB">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kyl-lB-LZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-834" y="-484"/>
         </scene>
@@ -897,7 +927,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="kG6-UH-vJJ" kind="relationship" relationship="viewControllers" id="bMX-JT-oDK"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="o0N-Er-ye2" kind="relationship" relationship="viewControllers" id="ELL-x7-EkO"/>
                         <segue destination="KGt-Qr-KE4" kind="relationship" relationship="viewControllers" id="mSE-Mg-kAX"/>
                         <segue destination="RcJ-mm-an3" kind="relationship" relationship="viewControllers" id="okt-PN-CS5"/>
                         <segue destination="aE0-ye-fBe" kind="relationship" relationship="viewControllers" id="bi5-qN-Oi6"/>
@@ -1208,7 +1238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRz-Ym-z4x" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="178" y="-484"/>
+            <point key="canvasLocation" x="94" y="-484"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Nro-cV-jpF">
@@ -1266,7 +1296,6 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="playBtnPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="8Bz-b6-f50"/>
                                             <action selector="playBtnPressed:" destination="KGt-Qr-KE4" eventType="touchUpInside" id="uYP-2M-kEv"/>
                                         </connections>
                                     </button>
@@ -1584,13 +1613,13 @@
         <image name="cross" width="40" height="40"/>
         <image name="homepic1" width="365" height="436"/>
         <image name="homepic2" width="511" height="480"/>
-        <image name="jeu" width="187" height="333"/>
         <image name="link" width="40" height="40"/>
         <image name="logo" width="601" height="480"/>
         <image name="logoIcon" width="50" height="50"/>
         <image name="matmut" width="361" height="334"/>
         <image name="palette" width="426" height="62"/>
         <image name="publicité" width="285" height="234"/>
+        <image name="safebox1" width="400" height="480"/>
         <image name="trophy" width="50" height="48"/>
         <image name="user" width="50" height="48"/>
     </resources>
